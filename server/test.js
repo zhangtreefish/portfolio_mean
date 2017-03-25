@@ -10,7 +10,6 @@ var projects = require('./projects2');
  */
 describe('dbInterface', function() {
   var db;
-  var succeeded = 0;
   var fullStackProjects;
 
   /**
@@ -43,7 +42,6 @@ describe('dbInterface', function() {
       assert.ok(Array.isArray(docs));
       assert.equal(docs.length, 1);
       assert.equal(docs[0].title, 'Tour of Projects');
-      ++succeeded;
       done();
     });
   });
@@ -70,7 +68,6 @@ describe('dbInterface', function() {
                     "image",
                     "url",
                     "code"]);
-      ++succeeded;
       fullStackProjects = docs;
       done();
     });
@@ -81,7 +78,6 @@ describe('dbInterface', function() {
    */
   before(function(done) {
     connect(function(error, conn) {
-      //console.log('look here aft conn!!');
       if (error) {
         return done(error);
       }
@@ -101,17 +97,7 @@ describe('dbInterface', function() {
     });
   });
 
-  /**
-   *  The below code generates the answer code that we will use to
-   *  verify you got the correct answer. Modifying this code is a
-   *  violation of the honor code.
-   */
   after(function(done) {
-    if (succeeded >= 1) {
-      console.log('success!')
       db.close(done);
-    } else {
-      db.close(done);
-    }
   });
 });
