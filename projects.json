@@ -1,4 +1,4 @@
-                {
+{"projects": [                {
                     "id": "1",
                     "genre": "front end",
                     "title": "Tour of Projects",
@@ -8,7 +8,7 @@
                     "image": "http://i.imgur.com/yyR3ZmX.png",
                     "url": "https://zhangtreefish.github.io/treefishportfolio",
                     "code": "https://github.com/zhangtreefish/treefishportfolio.git"
-                }
+                },
                 {
                     "id": "2",
                     "genre": "full stack",
@@ -19,7 +19,7 @@
                     "image": "http://i.imgur.com/dd4d0fr.png",
                     "url": "http://ec2-52-38-199-253.us-west-2.compute.amazonaws.com/",
                     "code": "https://github.com/zhangtreefish/Project-3-for-Full-Stack-Nanodegree-at-Udacity"
-                }
+                },
                 {
                     "id": "3",
                     "genre": "front end",
@@ -30,10 +30,10 @@
                     "image": "http://i.imgur.com/TMw9w29.png",
                     "url": "https://zhangtreefish.github.io/Project-3-for-Front-End-Web-Developer-Nanodegree",
                     "code": "https://github.com/zhangtreefish/Project-3-for-Front-End-Web-Developer-Nanodegree"
-                }
+                },
                 {
                     "id": "4",
-                    "genre": "full stack",
+                    "genre": "back end",
                     "title": "Tictactoe Game API",
                     "dates": "2015-2015",
                     "description": "Created a platform-agnostic, RESTful API on Google App Engine Endpoints to serve a game app",
@@ -41,10 +41,10 @@
                     "image": "http://i.imgur.com/Hwd5fSb.jpg",
                     "url": "https://tictactoe-2016.appspot.com/_ah/api/explorer",
                     "code": "https://github.com/zhangtreefish/Project-4-for-Full-Stack-Nanodegree-at-Udacity.git"
-                }
+                },
                 {
                     "id": "5",
-                    "genre": "full stack",
+                    "genre": "back end",
                     "title": "A Tournament Database",
                     "dates": "2015-2015",
                     "description": "Developed a PostgreSQL database to track the players and matches of a tournament",
@@ -52,7 +52,7 @@
                     "image": "",
                     "url": "",
                     "code": "https://github.com/psycopg/psycopg2.git"
-                }
+                },
                 {
                     "id": "6",
                     "genre": "full stack",
@@ -63,7 +63,7 @@
                     "image": "http://i.imgur.com/YO1cjJr.png",
                     "url": "http://zhangtreefish.github.io/Project-1-for-Full-Stack-Web-Developer-Nanodegree/",
                     "code": "https://github.com/zhangtreefish/Project-1-for-Full-Stack-Web-Developer-Nanodegree.git"
-                }
+                },
                 {
                     "id": "7",
                     "genre": "front end",
@@ -74,7 +74,7 @@
                     "image": "http://i.imgur.com/11ovdoO.jpg",
                     "url": "http://zhangtreefish.github.io/Project-6-for-Front-End-Web-Developer-Nanodegree/",
                     "code": "https://github.com/zhangtreefish/Project-6-for-Front-End-Web-Developer-Nanodegree"
-                }
+                },
                 {
                     "id": "8",
                     "genre": "front end",
@@ -85,7 +85,7 @@
                     "image": "http://i.imgur.com/XaqjwTe.jpg",
                     "url": "http://zhangtreefish.github.io/Project-4-for-Front-End-Web-Developer-Nanodegree/",
                     "code": "https://github.com/zhangtreefish/Project-4-for-Front-End-Web-Developer-Nanodegree"
-                }
+                },
                 {
                     "id": "9",
                     "genre": "front end",
@@ -96,7 +96,7 @@
                     "image": "https://i.imgur.com/78mvBFX.jpg",
                     "url": "http://zhangtreefish.github.io/Project-2-for-Front-End-Web-Developer-Nanodegree",
                     "code": "https://github.com/zhangtreefish/Project-2-for-Front-End-Web-Developer-Nanodegree"
-                }
+                },
                 {
                     "id": "10",
                     "genre": "front end",
@@ -107,7 +107,7 @@
                     "image": "http://i.imgur.com/coxWkyU.png",
                     "url": "http://zhangtreefish.github.io/Project-1-for-Udacity-Front-End-Web-Developer-Nanodegree/",
                     "code": "https://github.com/zhangtreefish/Project-1-for-Udacity-Front-End-Web-Developer-Nanodegree"
-                }
+                },
                 {
                     "id": "11",
                     "genre": "front end",
@@ -118,7 +118,7 @@
                     "image": "http://i.imgur.com/Hj8sHVm.jpg",
                     "url": "http://zhangtreefish.github.io/minicourse-ajax-project/",
                     "code": "https://github.com/zhangtreefish/minicourse-ajax-project"
-                }
+                },
                 {
                     "id": "12",
                     "genre": "front end",
@@ -129,7 +129,7 @@
                     "image": "http://i.imgur.com/N5oMeud.jpg",
                     "url": "https://udacity-alumni-client.herokuapp.com",
                     "code": "https://github.com/udacityalumni/alumni-client"
-                }
+                },
                 {
                     "id": "13",
                     "genre": "front end",
@@ -140,7 +140,7 @@
                     "image": "http://i.imgur.com/ztDG76q.jpg",
                     "url": "http://zhangtreefish.github.io/Project-5-for-Front-End-Web-Developer-Nanodegree/",
                     "code": "https://github.com/zhangtreefish/Project-5-for-Front-End-Web-Developer-Nanodegree"
-                }
+                },
                 {
                     "id": "14",
                     "genre": "full stack",
@@ -151,4 +151,16 @@
                     "image": "http://i.imgur.com/Mb5nYZw.png",
                     "url": "https://3-dot-default-dot-gaejinjablog.appspot.com",
                     "code": "https://github.com/zhangtreefish/blog"
+                },
+                {
+                    "id": "15",
+                    "genre": "full stack",
+                    "title": "Java Blog",
+                    "dates": "2017-2017",
+                    "description": "Built a blog with Java, MongoDB and Spark microframework",
+                    "tools": ["mongodb", "spark", "freemarker", "netbeans", "maven", "java"],
+                    "image": "",
+                    "url": "",
+                    "code": ""
                 }
+            ]}

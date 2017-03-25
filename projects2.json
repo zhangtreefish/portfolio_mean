@@ -1,0 +1,34 @@
+{"projects": [                {
+                    "id": "1",
+                    "genre": "front end",
+                    "title": "Tour of Projects",
+                    "dates": "2016-2016",
+                    "description": "Showcased my projects and web develop skills",
+                    "tools": ["angular2", "typescript", "angular2-cli", "selenium", "webdriverio", "node.js", "jasmine"],
+                    "image": "http://i.imgur.com/yyR3ZmX.png",
+                    "url": "https://zhangtreefish.github.io/treefishportfolio",
+                    "code": "https://github.com/zhangtreefish/treefishportfolio.git"
+                },
+                {
+                    "id": "2",
+                    "genre": "full stack",
+                    "title": "Therapeutic Foods",
+                    "dates": "2016-2016",
+                    "description": "Developed a Flask web app, hosted it in Amazon Web Service using Apache HTTP Server and PostgreSQL on Ubuntu system",
+                    "tools": ["amazon-web-services", "apache2", "postgresql", "ubuntu", "linux", "flask", "jinja2", "python", "json", "sqlalchemy", "oauth2", "imgur"],
+                    "image": "http://i.imgur.com/dd4d0fr.png",
+                    "url": "http://ec2-52-38-199-253.us-west-2.compute.amazonaws.com/",
+                    "code": "https://github.com/zhangtreefish/Project-3-for-Full-Stack-Nanodegree-at-Udacity"
+                },
+                {
+                    "id": "3",
+                    "genre": "front end",
+                    "title": "A Frogger Game",
+                    "dates": "2015-2015",
+                    "description": "Implemented a Frogger game with an immunology twist using Object-Oriented javaScript and HTML5 Canvas",
+                    "tools": ["javascript", "oop", "canvas", "requestanimationframe"],
+                    "image": "http://i.imgur.com/TMw9w29.png",
+                    "url": "https://zhangtreefish.github.io/Project-3-for-Front-End-Web-Developer-Nanodegree",
+                    "code": "https://github.com/zhangtreefish/Project-3-for-Front-End-Web-Developer-Nanodegree"
+                }
+            ]}
