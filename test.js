@@ -13,14 +13,10 @@ describe('dbInterface', function() {
   var succeeded = 0;
   var fullStackProjects;
 
-  it('works', function() {
-    ++succeeded;
-  });
   /**
    *  This test tests if interface.js' `insert()` function properly inserts.
    */
   it('can insert a project', function(done) {
-    this.timeout(6000);
     var project = { "id": "20",
                     "genre": "full stack",
                     "title": "Portfolio!",
@@ -57,7 +53,6 @@ describe('dbInterface', function() {
    *  projects in ascending order by their title.
    */
   it('returns multiple results ordered by genre', function(done) {
-    this.timeout(6000);
     dbInterface.byGenre(db, 'front end', function(error, docs) {
       assert.ifError(error);
       assert.ok(Array.isArray(docs));
@@ -90,24 +85,17 @@ describe('dbInterface', function() {
       if (error) {
         return done(error);
       }
-      //console.log('look here aft conn-err-check!!');
       db = conn;
       db.collection('projects').removeMany({}, function(error) {
-        //console.log('look here after remove!!');
         if (error) {
           return done(error);
         }
-        console.log('look here after remove-err-check!!');
         var fns = [];
         projects.projects.forEach(function(proj) {
-          console.log('look here in forEach!!', proj.title);
           fns.push(function(callback) {
-            console.log('look here in push!!',proj.title);
             dbInterface.insert(db, proj, callback);
-            console.log('look here after dbInterface.insert!!',proj.title);
           });
         });
-        console.log('look here before parallel!!');
         require('async').parallel(fns, done);
       });
     });
