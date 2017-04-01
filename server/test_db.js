@@ -1,7 +1,6 @@
 var assert = require('assert');
 var connect = require('./connect');
 var dbInterface = require('./interface');
-var fs = require('fs');
 var projects = require('./projects2');
 
 /**
@@ -19,9 +18,10 @@ describe('dbInterface', function() {
     var project = { "id": "20",
                     "genre": "full stack",
                     "title": "Portfolio!",
-                    "dates": "2017",
+                    "year_start": 2017,
+                    "year_end": 2017,
                     "description": "on a MEAN stack, per the course on EdX",
-                    "tools": ["mean-stack", "mongodb-atlas", "passport-facebook", "heroku"],
+                    "tools": ["mean-stack", "mongodb-atlas", "passport-facebook", "heroku", "passport-oauth2"],
                     "image": "",
                     "url": "",
                     "code": ""
@@ -62,7 +62,8 @@ describe('dbInterface', function() {
       assert.deepEqual(Object.keys(docs[0]), ["id",
                     "genre",
                     "title",
-                    "dates",
+                    "year_start",
+                    "year_end",
                     "description",
                     "tools",
                     "image",
