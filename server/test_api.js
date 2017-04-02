@@ -131,7 +131,8 @@ describe('API', function() {
             result = JSON.parse(res.text).user;
           });
           assert.equal(result.data.portfolio.length, 1);
-          assert.equal(result.data.portfolio[0].title, 'Piano Studio');
+          assert.equal(result.data.portfolio[0].project.title, 'Piano Studio');
+          done();
         });
       });
     });
