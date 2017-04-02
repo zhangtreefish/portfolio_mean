@@ -100,7 +100,7 @@ describe('API', function() {
       },
       data: {
         oauth: 'invalid',
-        portfolio:[{project:PROJECT_ID}]
+        portfolio:[]
       }
     }];
 
@@ -131,7 +131,7 @@ describe('API', function() {
             result = JSON.parse(res.text).user;
           });
           assert.equal(result.data.portfolio.length, 1);
-          assert.equal(result.data.portfolio[0].project.title, 'Piano Studio');
+          assert.equal(result.data.portfolio[0].title, 'Piano Studio');
         });
       });
     });
@@ -152,7 +152,7 @@ describe('API', function() {
         User.findOne({}, function(error, user) {
           assert.ifError(error);
           assert.equal(user.data.portfolio.length, 1);
-          assert.equal(user.data.portfolio[0].project._id, PROJECT_ID);
+          assert.equal(user.data.portfolio[0].project, PROJECT_ID);
           done();
         });
       });

@@ -15,7 +15,7 @@ module.exports = new mongoose.Schema({
   },
   data: {
     oauth: { type: String, required: true },
-    portfolio: [{
+    portfolio: [ {
       project: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "Project"
