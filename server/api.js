@@ -6,6 +6,7 @@ var _ = require('underscore');
 module.exports = function(wagner) {
   var api = express.Router();
 
+  //parses request to json as req.body
   api.use(bodyparser.json());
 
   api.get('/something', wagner.invoke( function(Project) {
