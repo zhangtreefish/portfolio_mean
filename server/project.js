@@ -15,7 +15,7 @@ module.exports = function(goose_for_db) {
   };
 
   let schema = new mongoose.Schema(projectSchema);
-  schema.index({ tools: 'text' });
+  schema.index({ "tools": "text" });
 
   // schema.set('toObject', { virtuals: true });
   // schema.set('toJSON', { virtuals: true });

@@ -100,7 +100,7 @@ describe('API', function() {
       },
       data: {
         oauth: 'invalid',
-        portfolio:[]
+        portfolio:[{"project":"58e17c016d607c0e90f9661f"}]
       }
     }];
 
