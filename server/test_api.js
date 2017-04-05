@@ -100,7 +100,7 @@ describe('API', function() {
       },
       data: {
         oauth: 'invalid',
-        portfolio:[{"project":"58e17c016d607c0e90f9661f"}]
+        portfolio:[]
       }
     }];
 
@@ -171,7 +171,7 @@ describe('API', function() {
         results = JSON.parse(res.text).projects;
       });
 
-      // Expect that we got the Zenbook Prime back
+      // Expect that we got the Piano Studio back
       assert.equal(results.length, 2);
       assert.equal(results[1].id, '102');
       assert.equal(results[0].title, 'Piano Studio');

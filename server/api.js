@@ -72,7 +72,7 @@ module.exports = function(wagner) {
         find(
           { $text : { $search : req.params.query } },
           { score : { $meta: 'textScore' } }).
-        sort({ score: { $meta : 'textScore' } }).
+        sort({ score: { $meta : 'textScore' }, title: 1 }).
         exec(handleMany.bind(null, 'projects', res));
     };
   }));
