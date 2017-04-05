@@ -2,6 +2,8 @@ var bodyparser = require('body-parser');
 var express = require('express');
 var status = require('http-status');
 var _ = require('underscore');
+var mongoose = require('mongoose');
+var assert = require('assert');
 
 module.exports = function(wagner) {
   var api = express.Router();
@@ -61,19 +63,22 @@ module.exports = function(wagner) {
     };
   }));
 
-  //api.get('/me/portfolio/tool/:query', wagner.invoke(function(Project) {}))
-  //api.get('/me/portfolio/project/:id', wagner.invoke(function(Project) {}))
-  //api.get('/me/portfolio/genre/:query', wagner.invoke(function(Project) {}))
+  //TODO: api.get('/me/portfolio/tool/:query', wagner.invoke(function(Project) {}))
+  //TODO: api.get('/me/portfolio/project/:id', wagner.invoke(function(Project) {}))
+  //TODO: api.get('/me/portfolio/genre/:query', wagner.invoke(function(Project) {}))
 
   //returns all projects involving certain tool
+  //implemented using a promise instead of a callback
+  mongoose.Promise = require('bluebird');
   api.get('/projects/tool/:query', wagner.invoke(function(Project) {
     return function(req, res) {
-      Project.
+      let query_promise = Project.
         find(
           { $text : { $search : req.params.query } },
           { score : { $meta: 'textScore' } }).
-        sort({ score: { $meta : 'textScore' }, title: 1 }).
-        exec(handleMany.bind(null, 'projects', res));
+        sort({ score: { $meta : 'textScore' }, title: 1 }).exec();
+      assert.equal(query_promise.constructor, require('bluebird'));
+      query_promise.then(handleManyPromise.bind(null, 'projects', res));
     };
   }));
 
@@ -109,7 +114,18 @@ function handleMany(property, res, error, result) {
   json[property] = result;
   res.json(json);
 }
+function handleManyPromise(property, res, result) {
+  // if (error) {
+  //   console.log(error);
+  //   return res.
+  //     status(status.INTERNAL_SERVER_ERROR).
+  //     json({ error: error.toString() });
+  // }
 
+  var json = {};
+  json[property] = result;
+  res.json(json);
+}
 function handleOne(property, res, error, result) {
   if (error) {
     return res.
