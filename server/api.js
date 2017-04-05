@@ -40,7 +40,7 @@ module.exports = function(wagner) {
         status(status.NOT_FOUND).
         json({ error: 'No portfolio provided!' });
     }
-    //save: TODO
+
     req.user.data.portfolio = port;
 
     req.user.save(function(error, user) {
@@ -78,7 +78,12 @@ module.exports = function(wagner) {
           { score : { $meta: 'textScore' } }).
         sort({ score: { $meta : 'textScore' }, title: 1 }).exec();
       assert.equal(query_promise.constructor, require('bluebird'));
-      query_promise.then(handleManyPromise.bind(null, 'projects', res));
+      query_promise.
+        then(handleManyPromise.bind(null, 'projects', res)).
+        catch(function(err) {
+          console.log('error:', err);
+        })
+      ;
     };
   }));
 
