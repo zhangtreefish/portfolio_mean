@@ -69,7 +69,9 @@ function setupAuth(User, Config, app) {
       passport.authenticate('facebook', { callbackURL: url })(req, res, next);
     },
     function(req, res) {
-      res.redirect(req.query.redirect);
+      //res.redirect(req.query.redirect);
+      res.send('Welcome, ' + req.user.profile.username);
+      //res.redirect('/api/v1/me');
     });
 }
 
