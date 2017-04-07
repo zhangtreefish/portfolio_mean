@@ -6,26 +6,14 @@
     <script type="text/javascript"
       src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-route.js">
     </script>
+    <script type="text/javascript" src="/portfolio/bin/index.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/mean-app.css" />
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-    <script type="text/javascript">
-      var app = angular.module('myApp', ['ng', 'ngRoute']);
-
-      app.config(function($routeProvider) {
-        $routeProvider.
-          when('/', {
-            templateUrl: '/portfolio/home.html',
-            controller: function($scope) {
-              $scope.linkText = 'about';
-            }
-          }).
-          when('/about', {
-            templateUrl: '/portfolio/about.html'
-          });
-      });
-    </script>
   </head>
 
   <body>
-    <div ng-view></div>
+    <nav-bar></nav-bar>
+    <div class="content-wrapper" ng-view></div>
   </body>
 </html>

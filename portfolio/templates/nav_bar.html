@@ -1,0 +1,25 @@
+<div class="nav-bar">
+  <div class="nav-bar-contents">
+    <div class="logo">
+      <i class="icon-briefcase"></i> My Portfolio
+    </div>
+    <div class="title">
+      Portfolio Builder
+    </div>
+    <div class="user-info">
+      <div class="checkout" ng-show="user.user">
+        <a ng-href="#/portfolio">
+          <i class="fa fa-tasks"></i>
+        </a>
+      </div>
+      <div class="user" ng-show="user.user">
+        <img ng-src="{{user.user.profile.picture}}" />
+      </div>
+      <div class="login" ng-show="!user.user">
+        <a href="/auth/facebook?redirect=%2Fportfolio">
+          <img src="//i.stack.imgur.com/LKMP7.png">
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

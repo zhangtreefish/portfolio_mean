@@ -2,34 +2,37 @@ describe('Nav Bar', function() {
   var injector;
   var element;
   var scope;
-  var compiler;
+  var intercepts;
   var httpBackend;
 
   beforeEach(function() {
-    injector = angular.injector(['myApp', 'ngMockE2E']);
+    injector = angular.injector(['myApp.components', 'ngMockE2E']);
     intercepts = {};
 
     injector.invoke(function($rootScope, $compile, $httpBackend) {
       scope = $rootScope.$new();
-      compiler = $compile;
+
+      $httpBackend.whenGET(/.*\/templates\/.*/i).passThrough();
       httpBackend = $httpBackend;
+
+      element = $compile('<nav-bar></nav-bar>')(scope);
+      scope.$apply();
     });
   });
 
-  it('shows logged in users name', function(done) {
-    httpBackend.whenGET('/portfolio/template.html').passThrough();
+  it('shows logged in users profile picture', function(done) {
     httpBackend.expectGET('/api/v1/me').respond({
-      user: { profile: { username: 'John' } }
+      user: { profile: { picture: 'myPic' } }
     });
 
-    element = compiler('<user-menu></user-menu>')(scope);
-    scope.$apply();
+    scope.$on('NavBarController', function() {
+      assert.equal(element.find('.title').text().trim(), 'Portfolio Builder');
 
-    scope.$on('PortfolioHttpController', function() {
       httpBackend.flush();
-      assert.notEqual(element.find('.user').css('display'), 'none');
-      assert.equal(element.find('.user').text().trim(), 'Current User: John');
+      assert.notEqual(element.find('.user-info .user').css('display'), 'none');
+      assert.equal(element.find('.user-info .user img').attr('src'), 'myPic');
       done();
     });
   });
 });
+
