@@ -99,7 +99,7 @@ module.exports = function(wagner) {
   api.get('/project/id/:id', wagner.invoke(function(Project) {
     return function(req, res) {
       Project.
-        findOne({ "id" : req.params.id }).
+        findOne({ "_id" : req.params.id }).
         exec(handleOne.bind(null, 'project', res));
     };
   }));

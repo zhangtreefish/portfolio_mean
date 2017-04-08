@@ -20,9 +20,9 @@ exports.navBar = function() {
   };
 };
 
-// exports.productDetails = function() {
-//   return {
-//     controller: 'ProductDetailsController',
-//     templateUrl: '/B-examples/templates/product_details.html'
-//   };
-// };
+exports.projectDetails = function() {
+  return {
+    controller: 'ProjectDetailsController',
+    templateUrl: '/portfolio/templates/project_details.html'
+  };
+};

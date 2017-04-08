@@ -1,0 +1,28 @@
+<div class="project-details">
+  <div class="crumbs"> Toolbelt
+    <div class="crumb" ng-repeat="tool in project.tools">
+      <a ng-href="#/tool/{{tool}}">
+        {{tool}}
+      </a>
+      <div class="divider" ng-hide="$last">
+        /
+      </div>
+    </div>
+  </div>
+  <article class="project-details-content">
+    <figure class="image-left">
+      <img ng-src="{{project.image}}" alt="project image" />
+      <figcaption>#{{project.id}}, A {{project.genre}} project, {{project.year_start}} to {{project.year_end}}</figcaption>
+    </figure>
+    <section class="details-right">
+      <h1>{{project.title}}</h1>
+      <summary>{{project.description}}</summary>
+      <footer>
+        <button><a href={{project.url}}>url</a></button>
+        <button><a href={{project.code}}>code</a></button>
+      </footer>
+    </section>
+    <!-- <add-to-portfolio></add-to-portfolio> -->
+    <div style="clear: both"></div>
+  </article>
+</div>

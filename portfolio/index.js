@@ -31,5 +31,8 @@ app.config(function($routeProvider) {
       controller: function($scope) {
         $scope.linkText = 'about';
       }
-    })
+    }).
+    when('/project/:id', {
+      template: '<project-details></project-details>'
+    });
   });

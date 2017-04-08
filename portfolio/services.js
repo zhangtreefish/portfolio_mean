@@ -22,3 +22,4 @@ exports.$user = function($http) {
 
   return s;
 };
+ exports.$routeParams = require('routeParams');

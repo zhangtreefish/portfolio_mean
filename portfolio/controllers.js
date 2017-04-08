@@ -55,16 +55,16 @@ exports.NavBarController = function($scope, $user) {
   }, 0);
 };
 
-// exports.ProjectDetailsController = function($scope, $routeParams, $http) {
-//   var encoded = encodeURIComponent($routeParams.id);
+exports.ProjectDetailsController = function($scope, $routeParams, $http) {
+  var encoded = encodeURIComponent($routeParams.id);
 
-//   $http.
-//     get('/api/v1/project/id/' + encoded).
-//     success(function(data) {
-//       $scope.project = data.project;
-//     });
+  $http.
+    get('/api/v1/project/id/' + encoded).
+    success(function(data) {
+      $scope.project = data.project;
+    });
 
-//   setTimeout(function() {
-//     $scope.$emit('ProjectDetailsController');
-//   }, 0);
-// };
+  setTimeout(function() {
+    $scope.$emit('ProjectDetailsController');
+  }, 0);
+};
