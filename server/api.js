@@ -65,8 +65,8 @@ module.exports = function(wagner) {
 
   //TODO: api.get('/me/portfolio/tool/:query', wagner.invoke(function(Project) {}))
   //TODO: api.get('/me/portfolio/project/:id', wagner.invoke(function(Project) {}))
-  //TODO: api.get('/me/portfolio/genre/:query', wagner.invoke(function(Project) {}))
-
+  //TODO: api.get('/me/portfolio/genre/:genre', wagner.invoke(function(Project) {}))
+  //TODO: api.get('/me/portfolio/tools', wagner)
   //returns all projects involving certain tool
   //implemented using a promise instead of a callback
   mongoose.Promise = require('bluebird');

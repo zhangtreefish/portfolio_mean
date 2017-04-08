@@ -1,27 +1,19 @@
-<div class="product-wrapper">
-  <div class="sort-arrow" ng-click="handlePriceClick()">
-    Sort by Price
-    <span ng-show="price === -1">
-      <i class="fa fa-arrow-up"></i>
-    </span>
-    <span ng-show="price === 1 || price === undefined">
-      <i class="fa fa-arrow-down"></i>
-    </span>
-  </div>
+<div class="project-wrapper">
+  <header>{{tool}}</header>
   <div style="clear: both"></div>
-  <div class="product" ng-repeat="product in products">
-    <div class="product-image">
-      <img ng-src="{{product.pictures[0]}}" />
+  <div class="project" ng-repeat="project in projects">
+    <div class="project-image">
+      <img ng-src="{{project.image}}" />
     </div>
-    <div class="product-name">
-      <a ng-href="#/product/{{product._id}}">
-        {{product.name}}
+    <div class="project-name">
+      <a ng-href="#/project/{{project._id}}">
+        {{project.title}}
       </a>
     </div>
-    <div class="product-cost">
-      {{product.displayPrice}}
+    <div class="project-cost">
+      {{project.description}}
     </div>
-    <add-to-cart></add-to-cart>
+    <!-- <add-to-cart></add-to-cart> -->
   </div>
   <div style="clear: both"></div>
 </div>

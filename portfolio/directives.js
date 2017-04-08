@@ -5,12 +5,12 @@
 //   };
 // };
 
-// exports.toolProjects = function() {
-//   return {
-//     controller: 'ToolProjectsController',
-//     templateUrl: '/portfolio/templates/tool_projects.html'
-//   }
-// };
+exports.toolProjects = function() {
+  return {
+    controller: 'ToolProjectsController',
+    templateUrl: '/portfolio/templates/tool_projects.html'
+  }
+};
 
 
 exports.navBar = function() {

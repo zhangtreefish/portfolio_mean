@@ -16,35 +16,23 @@
 //   };
 // };
 
-// exports.CategoryProductsController = function($scope, $routeParams, $http) {
-//   var encoded = encodeURIComponent($routeParams.category);
+exports.ToolProjectsController = function($scope, $routeParams, $http) {
+  var encoded = encodeURIComponent($routeParams.tool);
+  $scope.tool = $routeParams.tool;
+  $scope.load = function() {
+    $http.
+      get('/api/v1/projects/tool/' + encoded).
+      success(function(data) {
+        $scope.projects = data.projects;
+      });
+  };
 
-//   $scope.price = undefined;
+  $scope.load();
 
-//   $scope.handlePriceClick = function() {
-//     if ($scope.price === undefined) {
-//       $scope.price = -1;
-//     } else {
-//       $scope.price = 0 - $scope.price;
-//     }
-//     $scope.load();
-//   };
-
-//   $scope.load = function() {
-//     var queryParams = { price: $scope.price };
-//     $http.
-//       get('/api/v1/product/category/' + encoded, { params: queryParams }).
-//       success(function(data) {
-//         $scope.products = data.products;
-//       });
-//   };
-
-//   $scope.load();
-
-//   setTimeout(function() {
-//     $scope.$emit('CategoryProductsController');
-//   }, 0);
-// };
+  setTimeout(function() {
+    $scope.$emit('ToolProjectsController');
+  }, 0);
+};
 
 
 exports.NavBarController = function($scope, $user) {

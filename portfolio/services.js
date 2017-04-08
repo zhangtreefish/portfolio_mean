@@ -22,4 +22,5 @@ exports.$user = function($http) {
 
   return s;
 };
- exports.$routeParams = require('routeParams');
+
+// exports.$routeParams = require('routeParams');
