@@ -63,6 +63,22 @@ module.exports = function(wagner) {
     };
   }));
 
+  api.get('/tools', wagner.invoke(function(Project) {
+    return function(req, res) {
+      Project.
+        aggregate([
+          {"$project": {"tools": 1}},
+          {"$unwind": "$tools"},
+          {"$group": {"_id": "$tools", "count":{"$sum": 1}}},
+          {"$sort": {"_id": 1}}
+        ]).
+        exec(handleMany.bind(null, 'tools', res));
+        // toArray(function(err, docs){
+        //   res.json(docs);
+        // });
+    };
+  }));
+
   //TODO: api.get('/me/portfolio/tool/:query', wagner.invoke(function(Project) {}))
   //TODO: api.get('/me/portfolio/project/:id', wagner.invoke(function(Project) {}))
   //TODO: api.get('/me/portfolio/genre/:genre', wagner.invoke(function(Project) {}))
