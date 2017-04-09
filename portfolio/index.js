@@ -37,5 +37,8 @@ app.config(function($routeProvider) {
     }).
     when('/tool/:tool', {
       template: '<tool-projects></tool-projects>'
+    }).
+    when('/anytool', {
+      template: '<any-tool></any-tool>'
     });
   });

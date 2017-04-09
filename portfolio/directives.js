@@ -12,6 +12,12 @@ exports.toolProjects = function() {
   }
 };
 
+exports.anyTool = function() {
+  return {
+    controller: 'AnyToolController',
+    templateUrl: '/portfolio/templates/any_tool.html'
+  }
+};
 
 exports.navBar = function() {
   return {

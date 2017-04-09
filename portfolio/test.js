@@ -44,7 +44,7 @@ describe('Project Details', function() {
   var httpBackend;
 
   beforeEach(function() {
-    injector = angular.injector(['myApp.components', 'ngMockE2E', 'myApp']);
+    injector = angular.injector(['myApp.components', 'ngMockE2E', 'myApp', 'ngRoute']);
     intercepts = {};
 
     injector.invoke(function($rootScope, $compile, $httpBackend, $ngRoute) {

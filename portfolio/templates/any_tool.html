@@ -1,0 +1,15 @@
+<div class="pickTool-wrapper">
+  <div style="clear: both"></div>
+  <form class="pickTool">
+    <label for="pickTool"> Pick a tool </label>
+    <select
+      name="pickTool"
+      id="pickTool"
+      ng-options="tool as tool._id for tool in tools"
+      ng-model="selectedTool"
+    >
+    </select>
+  </form>
+  <tt>picked {{selectedTool}}</tt>
+  <div style="clear: both"></div>
+</div>

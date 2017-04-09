@@ -34,6 +34,23 @@ exports.ToolProjectsController = function($scope, $routeParams, $http) {
   }, 0);
 };
 
+exports.AnyToolController = function($scope, $http) {
+  //$scope.tools = [];
+  $scope.selectedTool = {"_id":"selenium"};
+  $scope.load = function() {
+    $http.
+      get('/api/v1/tools').
+      success(function(data){
+        $scope.tools = data.tools;
+      });
+  };
+
+  $scope.load();
+
+  setTimeout(function() {
+    $scope.$emit('AnyToolController');
+  }, 0);
+};
 
 exports.NavBarController = function($scope, $user) {
   $scope.user = $user;

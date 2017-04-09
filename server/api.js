@@ -73,9 +73,6 @@ module.exports = function(wagner) {
           {"$sort": {"_id": 1}}
         ]).
         exec(handleMany.bind(null, 'tools', res));
-        // toArray(function(err, docs){
-        //   res.json(docs);
-        // });
     };
   }));
 

@@ -1,12 +1,22 @@
 I copied files from Chap4.7-examples of the MEAN course at EdX, and modified it to serve
  as my portfolio front-end.
 
-##How to view a detailed project in this Single-Page_App:
+##How to develop this Single-Page_App:
 
-Start the server:
+Git clone the application repository;
 
-cd server
-node index.js
+Checkout to a dev git branch;
 
-Go to `http://localhost:3000/portfolio/#/project/<_id>` to view a detailed project.
+At `portfolio` directory: Set node version to 0.12 and npm to match;
+```npm install```
+
+At `portfolio` directory: Start browserify with gulp:
+```gulp```
+
+At `server` directory: Start the server:
+```cd server```
+```node index.js```
+Go to `http://localhost:3000/auth/facebook` to authenticate, then:
+go to `http://localhost:3000/portfolio/#/project/<_id>` to view a detailed project;
+Make changes to .js code and watch the pages change.
 
