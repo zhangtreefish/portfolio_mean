@@ -36,38 +36,38 @@ describe('Nav Bar', function() {
   });
 });
 
-describe('Project Details', function() {
-  var injector;
-  var element;
-  var scope;
-  var intercepts;
-  var httpBackend;
+// describe('Project Details', function() {
+//   var injector;
+//   var element;
+//   var scope;
+//   var intercepts;
+//   var httpBackend;
 
-  beforeEach(function() {
-    injector = angular.injector(['myApp.components', 'ngMockE2E', 'myApp', 'ngRoute']);
-    intercepts = {};
+//   beforeEach(function() {
+//     injector = angular.injector(['myApp.components', 'ngMockE2E', 'myApp', 'ngRoute']);
+//     intercepts = {};
 
-    injector.invoke(function($rootScope, $compile, $httpBackend, $ngRoute) {
-      scope = $rootScope.$new();
+//     injector.invoke(function($rootScope, $compile, $httpBackend, $ngRoute) {
+//       scope = $rootScope.$new();
 
-      $httpBackend.whenGET(/.*\/templates\/.*/i).passThrough();
-      httpBackend = $httpBackend;
+//       $httpBackend.whenGET(/.*\/templates\/.*/i).passThrough();
+//       httpBackend = $httpBackend;
 
-      element = $compile('<project-details></project-details>')(scope);
-      scope.$apply();
-    });
-  });
+//       element = $compile('<project-details></project-details>')(scope);
+//       scope.$apply();
+//     });
+//   });
 
-  it('fetches project of certain id', function(done) {
-    httpBackend.expectGET('/api/v1/project/id/:id').respond({
-      project: { id: "1000", title: "under the fig tree", "year_start": 2017, description: "watch clouds" }
-    });
+//   it('fetches project of certain id', function(done) {
+//     httpBackend.expectGET('/api/v1/project/id/:id').respond({
+//       project: { id: "1000", title: "under the fig tree", "year_start": 2017, description: "watch clouds" }
+//     });
 
-    scope.$on('NavBarController', function() {
-      httpBackend.flush();
-      assert.notEqual(element.find('.details-right h1').text().trim(), 'under the fig tree');
-      done();
-    });
-  });
-});
+//     scope.$on('NavBarController', function() {
+//       httpBackend.flush();
+//       assert.notEqual(element.find('.details-right h1').text().trim(), 'under the fig tree');
+//       done();
+//     });
+//   });
+// });
 

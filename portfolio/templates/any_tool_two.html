@@ -6,10 +6,10 @@
       name="pickTool"
       id="pickTool"
       ng-options="tool as tool._id for tool in tools"
-      ng-model="pickedTool"
-      ng-change="goPickedTool()"
+      ng-model="selectedTool"
+      ng-change="load()"
     >
     </select>
   </form>
-  <tt>selected {{pickedTool}}</tt>
+  <tt>selected {{selectedTool}}</tt>
 </div>

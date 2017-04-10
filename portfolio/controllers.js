@@ -18,7 +18,6 @@
 
 exports.ToolProjectsController = function($scope, $routeParams, $http) {
   var encoded = encodeURIComponent($routeParams.tool);
-  $scope.tool = $routeParams.tool;
   $scope.load = function() {
     $http.
       get('/api/v1/projects/tool/' + encoded).
@@ -34,8 +33,23 @@ exports.ToolProjectsController = function($scope, $routeParams, $http) {
   }, 0);
 };
 
+exports.ToolProjectsTwoController = function($scope, $routeParams, $http, $shareTool, $log) {
+  $scope.selectedTool = $shareTool.selectedTool;
+  $scope.load = function() {
+    $http.
+      get('/api/v1/projects/tool/' + $scope.selectedTool._id).
+      success(function(data) {
+        $scope.projects = data.projects;
+        $log.log('projects', $scope.projects);
+      });
+  };
+
+  setTimeout(function() {
+    $scope.$emit('ToolProjectsTwoController');
+  }, 0);
+};
+
 exports.AnyToolController = function($scope, $http, $window, $log) {
-  //$scope.tools = [];
   $scope.load = function() {
     $http.
       get('/api/v1/tools').
@@ -43,8 +57,9 @@ exports.AnyToolController = function($scope, $http, $window, $log) {
         $scope.tools = data.tools;
       });
   };
-  $scope.goToPickedTool = function() {
-    var url = "http://" + $window.location.host + "/portfolio/#/tool/"+$scope.selectedTool._id;
+
+  $scope.goPickedTool = function(){
+    var url = "http://" + $window.location.host + "/portfolio/#/tool/"+$scope.pickedTool._id;
     $log.log('url', url);
     $window.location.href = url;
   };
@@ -53,6 +68,24 @@ exports.AnyToolController = function($scope, $http, $window, $log) {
 
   setTimeout(function() {
     $scope.$emit('AnyToolController');
+  }, 0);
+};
+
+exports.AnyToolTwoController = function($scope, $http, $window, $log, $shareTool) {
+  $scope.selectedTool = $shareTool.selectedTool;
+
+  $scope.load = function() {
+    $http.
+      get('/api/v1/tools').
+      success(function(data){
+        $scope.tools = data.tools;
+      });
+  };
+
+  $scope.load();
+
+  setTimeout(function() {
+    $scope.$emit('AnyToolTwoController');
   }, 0);
 };
 

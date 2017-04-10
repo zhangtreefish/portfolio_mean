@@ -33,3 +33,16 @@ exports.toolProjects = function() {
     templateUrl: '/portfolio/templates/tool_projects.html'
   }
 };
+
+exports.anyToolTwo = function() {
+  return {
+    controller: 'AnyToolTwoController',
+    templateUrl: '/portfolio/templates/any_tool_two.html'
+  }
+};
+exports.toolProjectsTwo = function() {
+  return {
+    controller: 'ToolProjectsTwoController',
+    templateUrl: '/portfolio/templates/tool_projects_two.html'
+  }
+};

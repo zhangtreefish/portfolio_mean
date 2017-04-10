@@ -23,4 +23,6 @@ exports.$user = function($http) {
   return s;
 };
 
-// exports.$routeParams = require('routeParams');
+exports.$shareTool = function() {
+  return {selectedTool: {_id: null}};
+};
