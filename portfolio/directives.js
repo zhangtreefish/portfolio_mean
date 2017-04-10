@@ -5,19 +5,6 @@
 //   };
 // };
 
-exports.toolProjects = function() {
-  return {
-    controller: 'ToolProjectsController',
-    templateUrl: '/portfolio/templates/tool_projects.html'
-  }
-};
-
-exports.anyTool = function() {
-  return {
-    controller: 'AnyToolController',
-    templateUrl: '/portfolio/templates/any_tool.html'
-  }
-};
 
 exports.navBar = function() {
   return {
@@ -31,4 +18,18 @@ exports.projectDetails = function() {
     controller: 'ProjectDetailsController',
     templateUrl: '/portfolio/templates/project_details.html'
   };
+};
+
+exports.anyTool = function() {
+  return {
+    controller: 'AnyToolController',
+    templateUrl: '/portfolio/templates/any_tool.html'
+  }
+};
+
+exports.toolProjects = function() {
+  return {
+    controller: 'ToolProjectsController',
+    templateUrl: '/portfolio/templates/tool_projects.html'
+  }
 };

@@ -34,15 +34,19 @@ exports.ToolProjectsController = function($scope, $routeParams, $http) {
   }, 0);
 };
 
-exports.AnyToolController = function($scope, $http) {
+exports.AnyToolController = function($scope, $http, $window, $log) {
   //$scope.tools = [];
-  $scope.selectedTool = {"_id":"selenium"};
   $scope.load = function() {
     $http.
       get('/api/v1/tools').
       success(function(data){
         $scope.tools = data.tools;
       });
+  };
+  $scope.goToPickedTool = function() {
+    var url = "http://" + $window.location.host + "/portfolio/#/tool/"+$scope.selectedTool._id;
+    $log.log('url', url);
+    $window.location.href = url;
   };
 
   $scope.load();

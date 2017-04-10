@@ -7,9 +7,15 @@
       id="pickTool"
       ng-options="tool as tool._id for tool in tools"
       ng-model="selectedTool"
+      ng-change="goToPickedTool()"
     >
     </select>
   </form>
   <tt>picked {{selectedTool}}</tt>
-  <div style="clear: both"></div>
+ <!--  <div style="clear: both"></div>
+  <div class="tool-select">
+    <a ng-href="#/tool/{{selectedTool._id}}">
+      {{selectedTool._id}}
+    </a>
+  </div> -->
 </div>
