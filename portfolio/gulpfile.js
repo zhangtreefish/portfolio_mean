@@ -11,7 +11,7 @@ gulp.task('browserify', function() {
 });
 
 gulp.task('watch', function() {
-  livereload.reload();
+  livereload.reload(['./index.html','./templates/*.html']);
   livereload.listen();
   gulp.watch(['./*.js'], ['browserify']);
 });
