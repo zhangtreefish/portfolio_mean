@@ -20,8 +20,8 @@ _.each(services, function(factory, name) {
 var app = angular.module('myApp', ['myApp.components', 'ngRoute']);
 app.config(function($routeProvider) {
   $routeProvider.
-    when('/start', {
-      templateUrl: '/portfolio/templates/tooltotal.html'
+    when('/', {
+      templateUrl: '/portfolio/templates/tool.html'
     }).
     when('/home', {
       templateUrl: '/portfolio/templates/home.html',
