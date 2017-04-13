@@ -6,7 +6,7 @@ describe('Nav Bar', function() {
   var httpBackend;
 
   beforeEach(function() {
-    injector = angular.injector(['myApp.components', 'ngMockE2E']);
+    injector = angular.injector(['myApp.components', 'myApp', 'ngMockE2E']);
     intercepts = {};
 
     injector.invoke(function($rootScope, $compile, $httpBackend) {
