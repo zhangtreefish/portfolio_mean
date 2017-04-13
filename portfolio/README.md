@@ -20,3 +20,5 @@ Go to `http://localhost:3000/auth/facebook` to authenticate, then:
 go to `http://localhost:3000/portfolio/#/project/<_id>` to view a detailed project;
 Make changes to .js code and watch the pages change.
 
+##References:
+https://github.com/stefanKuijers/live-templates/blob/master/live-templates.js
