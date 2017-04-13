@@ -24,5 +24,5 @@ exports.$user = function($http) {
 };
 
 exports.$shareTool = function() {
-  return {selectedTool: {_id: 'jquery'}};
+  return {selectedTool: {_id: 'javascript'}};
 };
