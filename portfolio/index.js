@@ -21,6 +21,9 @@ var app = angular.module('myApp', ['myApp.components', 'ngRoute']);
 app.config(function($routeProvider) {
   $routeProvider.
     when('/', {
+      templateUrl: '/portfolio/templates/tool.html'
+    }).
+    when('/home', {
       templateUrl: '/portfolio/templates/home.html',
       controller: function($scope) {
         $scope.linkText = 'about';
@@ -40,8 +43,5 @@ app.config(function($routeProvider) {
     }).
     when('/anytool', {
       template: '<any-tool></any-tool>'
-    }).
-    when('/tool', {
-      templateUrl: '/portfolio/templates/tool.html'
     });
   });
