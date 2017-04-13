@@ -1,0 +1,18 @@
+<div class="project-wrapper">
+  <header>Projects utilizing {{tool}} </header>
+  <div style="clear: both"></div>
+  <div class="project" ng-repeat="project in projects">
+    <div class="project-image">
+      <img ng-src="{{project.image}}" />
+    </div>
+    <div class="project-name">
+      <a ng-href="#/project/{{project._id}}">
+        {{project.title}}
+      </a>
+    </div>
+    <div class="project-cost">
+      {{project.description}}
+    </div>
+  </div>
+  <div style="clear: both"></div>
+</div>

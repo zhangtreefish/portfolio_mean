@@ -1,21 +1,37 @@
-// exports.AddToCartController = function($scope, $http, $user, $timeout) {
-//   $scope.addToCart = function(product) {
-//     var obj = { product: product._id, quantity: 1 };
-//     $user.user.data.cart.push(obj);
+exports.AddToPortfolioController = function($scope, $http, $user, $timeout) {
+  $scope.addToPortfolio = function(project) {
+    var obj = { project: project._id};
+    $user.user.data.portfolio.push(obj);
 
-//     $http.
-//       put('/api/v1/me/cart', { data: { cart: $user.user.data.cart } }).
-//       success(function(data) {
-//         $user.loadUser();
-//         $scope.success = true;
+    $http.
+      put('/api/v1/me/portfolio', { data: { portfolio: $user.user.data.portfolio } }).
+      success(function(data) {
+        $user.loadUser();
+        $scope.success = true;
 
-//         $timeout(function() {
-//           $scope.success = false;
-//         }, 5000);
-//       });
-//   };
-// };
+        $timeout(function() {
+          $scope.success = false;
+        }, 5000);
+      });
+  };
+};
 
+exports.ProjectsByToolController = function($scope, $routeParams, $http) {
+  $scope.tool = encodeURIComponent($routeParams.tool);
+  $scope.load = function() {
+    $http.
+      get('/api/v1/projects/tool/' + $scope.tool).
+      success(function(data) {
+        $scope.projects = data.projects;
+      });
+  };
+
+  $scope.load();
+
+  setTimeout(function() {
+    $scope.$emit('ProjectsByToolController');
+  }, 0);
+};
 
 exports.ToolProjectsTwoController = function($scope, $routeParams, $http, $shareTool, $log) {
   $scope.selectedTool = $shareTool.selectedTool;

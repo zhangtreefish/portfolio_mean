@@ -1,10 +1,9 @@
-// exports.addToPortfolio = function() {
-//   return {
-//     controller: 'AddToPortfolioController',
-//     templateUrl: '/portfolio/templates/add_to_portfolio.html'
-//   };
-// };
-
+exports.addToPortfolio = function() {
+  return {
+    controller: 'AddToPortfolioController',
+    templateUrl: '/portfolio/templates/add_to_portfolio.html'
+  };
+};
 
 exports.navBar = function() {
   return {
@@ -18,6 +17,13 @@ exports.projectDetails = function() {
     controller: 'ProjectDetailsController',
     templateUrl: '/portfolio/templates/project_details.html'
   };
+};
+
+exports.projectsByTool = function() {
+  return {
+    controller: 'ProjectsByToolController',
+    templateUrl: '/portfolio/templates/projects_by_tool.html'
+  }
 };
 
 exports.anyToolTwo = function() {

@@ -29,6 +29,9 @@ app.config(function($routeProvider) {
         $scope.linkText = 'about';
       }
     }).
+    when('/tool/:tool', {
+      template: '<projects-by-tool></projects-by-tool>'
+    }).
     when('/project/:id', {
       template: '<project-details></project-details>'
     });
