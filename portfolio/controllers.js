@@ -16,23 +16,6 @@
 //   };
 // };
 
-exports.ToolProjectsController = function($scope, $routeParams, $http) {
-
-  $scope.tool = encodeURIComponent($routeParams.tool);
-  $scope.load = function() {
-    $http.
-      get('/api/v1/projects/tool/' + $scope.tool).
-      success(function(data) {
-        $scope.projects = data.projects;
-      });
-  };
-
-  $scope.load();
-
-  setTimeout(function() {
-    $scope.$emit('ToolProjectsController');
-  }, 0);
-};
 
 exports.ToolProjectsTwoController = function($scope, $routeParams, $http, $shareTool, $log) {
   $scope.selectedTool = $shareTool.selectedTool;
@@ -49,28 +32,6 @@ exports.ToolProjectsTwoController = function($scope, $routeParams, $http, $share
   $scope.load();
   setTimeout(function() {
     $scope.$emit('ToolProjectsTwoController');
-  }, 0);
-};
-
-exports.AnyToolController = function($scope, $http, $window, $log) {
-  $scope.load = function() {
-    $http.
-      get('/api/v1/tools').
-      success(function(data){
-        $scope.tools = data.tools;
-      });
-  };
-
-  $scope.goPickedTool = function(){
-    var url = "http://" + $window.location.host + "/portfolio/#/tool/"+$scope.pickedTool._id;
-    $log.log('url', url);
-    $window.location.href = url;
-  };
-
-  $scope.load();
-
-  setTimeout(function() {
-    $scope.$emit('AnyToolController');
   }, 0);
 };
 

@@ -23,12 +23,6 @@ app.config(function($routeProvider) {
     when('/', {
       templateUrl: '/portfolio/templates/tool.html'
     }).
-    when('/home', {
-      templateUrl: '/portfolio/templates/home.html',
-      controller: function($scope) {
-        $scope.linkText = 'about';
-      }
-    }).
     when('/about', {
       templateUrl: '/portfolio/templates/about.html',
       controller: function($scope) {
@@ -37,11 +31,5 @@ app.config(function($routeProvider) {
     }).
     when('/project/:id', {
       template: '<project-details></project-details>'
-    }).
-    when('/tool/:tool', {
-      template: '<tool-projects></tool-projects>'
-    }).
-    when('/anytool', {
-      template: '<any-tool></any-tool>'
     });
   });

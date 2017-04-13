@@ -20,20 +20,6 @@ exports.projectDetails = function() {
   };
 };
 
-exports.anyTool = function() {
-  return {
-    controller: 'AnyToolController',
-    templateUrl: '/portfolio/templates/any_tool.html'
-  }
-};
-
-exports.toolProjects = function() {
-  return {
-    controller: 'ToolProjectsController',
-    templateUrl: '/portfolio/templates/tool_projects.html'
-  }
-};
-
 exports.anyToolTwo = function() {
   return {
     controller: 'AnyToolTwoController',
