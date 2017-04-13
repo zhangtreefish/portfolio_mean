@@ -7,6 +7,7 @@
       id="pickTool"
       ng-options="tool as tool._id for tool in tools"
       ng-model="selectedTool"
+      ng-change="load()"
     >
     </select>
   </form>
