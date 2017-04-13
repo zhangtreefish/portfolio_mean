@@ -1,10 +1,14 @@
-[{
+[   {
       "profile": {
         "username": "treefish",
         "picture": "http://i.imgur.com/5r0DB0H.jpg"
       },
       "data": {
         "oauth": "invalid",
-        "portfolio":[{"project":"58e17c016d607c0e90f9661f"}]
+        "portfolio":[
+        	{"project":"ObjectId('58e51d0f6d607c0e90a9db3c')"},
+        	{"project":"ObjectId('58e51d0f6d607c0e90a9db3e')"}
+        ]
       }
-    }]
+    }
+]

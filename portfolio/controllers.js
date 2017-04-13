@@ -90,3 +90,26 @@ exports.ProjectDetailsController = function($scope, $routeParams, $http) {
     $scope.$emit('ProjectDetailsController');
   }, 0);
 };
+
+exports.MeController = function($scope, $user, $http) {
+  $scope.user = $user;
+
+  $http.
+    get('/api/v1/projects').
+    success(function(data) {
+      $scope.projects = data.projects;
+    });
+
+  $scope.updatePortfolio = function() {
+    $http.
+      put('/api/v1/me/portfolio', $user.user).
+      success(function(data) {
+        $scope.updated = true;
+      });
+  };
+
+
+  $scope.printPortfolio = function() {
+    $scope.error = null;
+  };
+};
