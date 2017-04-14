@@ -1,4 +1,6 @@
-exports.AddToPortfolioController = function($scope, $http, $user, $timeout) {
+exports.AddToPortfolioController = function($scope, $http, $user, $timeout, $shareProject) {
+  $scope.project = $shareProject.project;
+
   $scope.addToPortfolio = function(project) {
     var obj = { project: project._id};
     $user.user.data.portfolio.push(obj);
@@ -16,13 +18,15 @@ exports.AddToPortfolioController = function($scope, $http, $user, $timeout) {
   };
 };
 
-exports.ProjectsByToolController = function($scope, $routeParams, $http) {
-  $scope.tool = encodeURIComponent($routeParams.tool);
+exports.ProjectsByToolController = function($scope, $routeParams, $http, $log) {
+  $scope.tool = $routeParams.tool;
+  var encoded = encodeURIComponent($routeParams.tool);
   $scope.load = function() {
     $http.
-      get('/api/v1/projects/tool/' + $scope.tool).
+      get('/api/v1/projects/tool/' + encoded).
       success(function(data) {
         $scope.projects = data.projects;
+        $log.log('projects', $scope.projects);
       });
   };
 
@@ -77,8 +81,9 @@ exports.NavBarController = function($scope, $user) {
   }, 0);
 };
 
-exports.ProjectDetailsController = function($scope, $routeParams, $http) {
+exports.ProjectDetailsController = function($scope, $routeParams, $shareProject, $http) {
   var encoded = encodeURIComponent($routeParams.id);
+  $scope.project = $shareProject.project;
 
   $http.
     get('/api/v1/project/id/' + encoded).

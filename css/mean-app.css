@@ -209,7 +209,7 @@ a {
   padding-bottom: 10px;
 }
 
-.project .project-name {
+.project .project-title {
   max-height: 2em;
   height: 2em;
   overflow: hidden;
@@ -221,7 +221,7 @@ a {
   margin-bottom: 5px;
 }
 
-.project .project-cost {
+.project .project-description {
   font-size: 0.75em;
   color: #666666;
   margin-top: 0.25em;
@@ -275,32 +275,32 @@ a {
 
 /* checkout */
 
-.checkout-wrapper .checkout-project {
+.me-wrapper .me-project {
   margin: 5px;
   padding: 5px;
   border-bottom: 1px solid #bdbdbd;
 }
 
-.checkout-wrapper .checkout-project .image-left {
+.me-wrapper .me-project .image-left {
   float: left;
   margin-right: 15px;
 }
 
-.checkout-wrapper .checkout-project .image-left img {
+.me-wrapper .me-project .image-left img {
   height: 80px;
   width: 80px;
 }
 
-.checkout-wrapper .checkout-project .project-details {
+.me-wrapper .me-project .project-details {
   float: left;
 }
 
-.checkout-wrapper .checkout-project .project-details .name {
+.me-wrapper .me-project .project-details .name {
   height: 1em;
   overflow: hidden;
 }
 
-.checkout-wrapper .checkout-project .project-details .price {
+.me-wrapper .me-project .project-details .price {
   font-size: 0.75em;
   color: #666666;
   margin-left: 0.5em;
@@ -308,7 +308,7 @@ a {
   margin-bottom: 15px;
 }
 
-.checkout-wrapper .update-cart-button {
+.me-wrapper .update-portfolio-button {
   width: 100px;
   font-size: 18px;
   color: white;
@@ -321,14 +321,14 @@ a {
   cursor: pointer;
 }
 
-.checkout-wrapper .checkout {
+.me-wrapper .me {
   margin-top: 25px;
   border: 1px solid #bdbdbd;
   border-radius: 5px;
   padding: 10px;
 }
 
-.checkout-wrapper .checkout-button {
+.me-wrapper .me-button {
   width: 100px;
   font-size: 18px;
   color: white;

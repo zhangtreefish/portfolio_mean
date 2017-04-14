@@ -26,3 +26,6 @@ exports.$user = function($http) {
 exports.$shareTool = function() {
   return {selectedTool: {_id: 'javascript'}};
 };
+exports.$shareProject = function() {
+  return {selectedProject: {}};
+};
