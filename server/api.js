@@ -62,7 +62,7 @@ module.exports = function(wagner) {
     });
   });
 //TODO
-  api.post('/users/newuser', , wagner.invoke(function(User) {
+  api.post('/users/newuser', wagner.invoke(function(User) {
     return function(req, res) {
       try {
        var username = req.body.user.username;
@@ -82,8 +82,8 @@ module.exports = function(wagner) {
         }
         return res.json({ newuser: newUser });
       });
-    }
-  });
+    };
+  }));
 
   //return all projects by default
   api.get('/projects', wagner.invoke(function(Project) {
