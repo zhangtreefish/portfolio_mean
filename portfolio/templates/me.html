@@ -1,0 +1,25 @@
+<div class="me-wrapper">
+  <div  ng-repeat="item in projects"
+        class="me-project">
+
+    <div class="project-details">
+      <div class="title">
+        {{item.title}}
+      </div>
+    </div>
+    <div style="clear: both"></div>
+  </div>
+  <div class="update-portfolio-button" ng-click="updatePortfolio()">
+    Update My Portfolio
+  </div>
+</div>
+ <!--  <div class="image-left">
+    <img ng-src="{{item.image}}">
+  </div> -->
+        <!-- <div class="price">
+      {{item.description}}
+    </div>
+    <div class="quantity">
+      Description:
+      <input type="text" ng-model="item.description" />
+    </div> -->

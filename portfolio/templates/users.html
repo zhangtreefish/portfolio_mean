@@ -1,0 +1,28 @@
+<div class="customers view">
+    <div class="container">
+        <header>
+            <h3>Users</h3>
+        </header>
+        <div class="row">
+            <div class="span3">
+                Username:
+                <br />
+                <input ng-model="newUser.username" type="text" placeholder="Username">
+            </div>
+            <button id="submitUser" class="btn btn-primary" type="button"
+                    ng-disabled="!newUser.username"
+                    click="insertUser()">Add User
+            </button>
+        </div>
+        <br /><br />
+        <div class="row">
+            <div cardContainer">
+                <div class="span3 card" data-ng-repeat="user in users | orderBy:'lastName'">
+                    <button class="btn close cardClose" data-ng-click="deleteUser(user._id)">&times;</button>
+                    <div class="cardHeader">{{user.profile.username}}</div>
+                    <a href="#/portfolios/{{user._id}}" class="cardBody btn-link">View Portfolio</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
