@@ -1,7 +1,40 @@
+/* Bootstrap overrides from D wahlins */
+.navbar-inner {
+    -webkit-border-radius: 0px;
+    border-radius: 0px;
+}
+
+.navbar .nav {
+    margin-left:50px;
+    margin-top:15px;
+}
+html,
+body {
+    height: 100%;
+    /* The html and body elements cannot have any padding or margin. */
+}
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /* Negative indent footer by it's height */
+    margin: 0 auto -30px;
+}
+
+/* Set the fixed height of the footer here */
+#push,
+#footer {
+    height: 50px;
+}
+
+#footer {
+    background-color: #f5f5f5;
+}
 body {
   margin: 0px;
   padding: 0px;
   font-family: 'Helvetica', sans-serif;
+  padding-bottom: 170px;
 }
 
 .content-wrapper {
@@ -182,7 +215,7 @@ a {
   margin-left: 0.5em;
 }
 
-.project {
+.project, .pickTool {
   border: 1px solid #54CC14;
   border-radius: 5px;
   padding: 5px;
@@ -195,18 +228,10 @@ a {
   padding-bottom: 10px;
 }
 
-/*same as .project except width*/
-.pickTool {
-  border: 1px solid #54CC14;
-  border-radius: 5px;
-  padding: 5px;
-  background-color: #fdfdfd;
-  width: 250px;
-  margin: 5px;
-  float: left;
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
+
+#pickTool {
+  width: 200px;
+  height: 2em;
 }
 
 .project .project-title {
@@ -216,8 +241,8 @@ a {
 }
 
 .project .project-image img {
-  width: 150px;
-  height: 150px;
+  width: 200px;
+  height: 200px;
   margin-bottom: 5px;
 }
 
@@ -254,7 +279,7 @@ a {
 
 .project-details .details-right {
   float: left;
-  width: 600px;
+  width: 300px;
 }
 
 .project-details h1 {
@@ -295,12 +320,12 @@ a {
   float: left;
 }
 
-.me-wrapper .me-project .project-details .name {
-  height: 1em;
+.me-wrapper .me-project .project-details .title {
   overflow: hidden;
+  font-size: 1.5em;
 }
 
-.me-wrapper .me-project .project-details .price {
+.me-wrapper .me-project .project-details .description {
   font-size: 0.75em;
   color: #666666;
   margin-left: 0.5em;

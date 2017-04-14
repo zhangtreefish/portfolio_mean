@@ -2,7 +2,7 @@
   <header>Projects utilizing {{tool}} </header>
   <div style="clear: both"></div>
   <div class="project" ng-repeat="project in projects">
-    <div>
+    <div class="project-details-content">
       <div class="project-image">
         <img ng-src="{{project.image}}" />
       </div>
@@ -14,6 +14,7 @@
       <div class="project-description">
         {{project.description}}
       </div>
+      <div> hi</div>
       <add-to-portfolio></add-to-portfolio>
       <div style="clear: both"></div>
     </div>

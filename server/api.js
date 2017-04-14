@@ -31,6 +31,15 @@ module.exports = function(wagner) {
     req.user.populate({path:'data.portfolio.project', model:'Project'}, handleOne.bind(null, 'user', res));
   });
 
+  api.get('/users', wagner.invoke(function(User) {
+    return function(req, res) {
+      User.
+        find().
+        sort({ username: 1 }).
+        exec(handleMany.bind(null, 'users', res));
+    };
+  }));
+
   //save user's portfolio
   api.put('/me/portfolio', function(req, res) {
     try {
@@ -51,6 +60,29 @@ module.exports = function(wagner) {
       }
       return res.json({ user: user });
     });
+  });
+//TODO
+  api.post('/users/newuser', , wagner.invoke(function(User) {
+    return function(req, res) {
+      try {
+       var username = req.body.user.username;
+      } catch(e) {
+        return res.
+          status(status.NOT_FOUND).
+          json({ error: 'No user present!' });
+      }
+
+      var newUser = new User();
+      newUser.profile.username = username;
+      newUser.save(function(error, newUser) {
+        if (error) {
+          return res.
+            status(status.INTERNAL_SERVER_ERROR).
+            json({ error: error.toString() });
+        }
+        return res.json({ newuser: newUser });
+      });
+    }
   });
 
   //return all projects by default

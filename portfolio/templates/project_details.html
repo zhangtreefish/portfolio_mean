@@ -9,20 +9,26 @@
       </div>
     </div>
   </div>
-  <article class="project-details-content">
-    <figure class="image-left">
-      <img ng-src="{{project.image}}" alt="project image" />
-      <figcaption>#{{project.id}}, A {{project.genre}} project, {{project.year_start}} to {{project.year_end}}</figcaption>
-    </figure>
-    <section class="details-right">
-      <h1>{{project.title}}</h1>
-      <summary>{{project.description}}</summary>
-      <footer>
-        <button><a href={{project.url}}>url</a></button>
-        <button><a href={{project.code}}>code</a></button>
-      </footer>
-    </section>
-    <add-to-portfolio></add-to-portfolio>
-    <div style="clear: both"></div>
+
+  <article class="project-details-content" class="container-fluid">
+    <div class="row">
+      <figure class="image-left">
+        <img ng-src="{{project.image}}" alt="project image" />
+        <figcaption>#{{project.id}}, A {{project.genre}} project, {{project.year_start}} to {{project.year_end}}</figcaption>
+      </figure>
+      <section class="details-right">
+        <h1>{{project.title}}</h1>
+        <summary>{{project.description}}</summary>
+        <footer>
+          <button><a href={{project.url}}>url</a></button>
+          <button><a href={{project.code}}>code</a></button>
+        </footer>
+      </section>
+      <div style="clear: both"></div>
+    </div>
+    <div class="row">
+      <add-to-portfolio></add-to-portfolio>
+      <div style="clear: both"></div>
+    </div>
   </article>
 </div>

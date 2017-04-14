@@ -1,20 +1,30 @@
 <html ng-app="myApp">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <script type="text/javascript"
       src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular.js">
     </script>
     <script type="text/javascript"
       src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.0/angular-route.js">
     </script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.min.js"
+      integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+      crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script type="text/javascript" src="/portfolio/live.js"></script>
     <script type="text/javascript" src="/portfolio/bin/index.js"></script>
     <link rel="stylesheet" type="text/css" href="/css/mean-app.css" />
     <script src="https://use.fontawesome.com/eaeb7f2364.js"></script>
 
   </head>
-
   <body>
-    <nav-bar></nav-bar>
-    <div class="content-wrapper" ng-view></div>
+    <div id="wrap" class="container-fluid">
+      <nav-bar></nav-bar>
+      <div class="content-wrapper" ng-view></div>
+      <custom-footer></custom-footer>
+<!--       <div id="push"></div> -->
+    </div>
   </body>
 </html>

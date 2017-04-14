@@ -12,6 +12,13 @@ exports.navBar = function() {
   };
 };
 
+exports.customFooter = function() {
+  return {
+    controller: 'CustomFooterController',
+    templateUrl: '/portfolio/templates/footer.html'
+  }
+};
+
 exports.projectDetails = function() {
   return {
     controller: 'ProjectDetailsController',
@@ -46,3 +53,10 @@ exports.me = function() {
     templateUrl: '/portfolio/templates/me.html'
   }
 };
+
+exports.users = function() {
+  return {
+    controller: 'UsersController',
+    templateUrl: '/portfolio/templates/users.html'
+  }
+}

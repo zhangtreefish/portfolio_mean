@@ -1,14 +1,45 @@
+exports.UsersController = function ($scope, $users, $insertUser, $deleteUser, $http) {
+
+    //I like to have an init() for controllers that need to perform some initialization. Keeps things in
+    //one place...not required though especially in the simple example below
+    $scope.load = function() {
+        $scope.users = $users();
+    }
+    $scope.newUser.username = '';
+    $scope.insertUser = function () {
+
+        $insertUser();
+        $scope.newUser.username = '';
+    };
+
+    $scope.deleteUser = function (id) {
+        $deleteUser(id);
+    };
+
+    $scope.load();
+
+    setTimeout(function() {
+    $scope.$emit('UsersController');
+  }, 0);
+};
+
+exports.CustomFooterController = function($window, $scope) {
+  $scope.goLinkedIn = function() {
+    $window.location.href = "www.linkedin.com/in/zhangshuyu";
+  };
+};
+
 exports.AddToPortfolioController = function($scope, $http, $user, $timeout, $shareProject) {
   $scope.project = $shareProject.project;
 
   $scope.addToPortfolio = function(project) {
-    var obj = { project: project._id};
+    var obj = { project: project};
     $user.user.data.portfolio.push(obj);
 
     $http.
       put('/api/v1/me/portfolio', { data: { portfolio: $user.user.data.portfolio } }).
       success(function(data) {
-        $user.loadUser();
+        $user.loadUser($http);
         $scope.success = true;
 
         $timeout(function() {
@@ -16,6 +47,10 @@ exports.AddToPortfolioController = function($scope, $http, $user, $timeout, $sha
         }, 5000);
       });
   };
+
+  setTimeout(function() {
+    $scope.$emit('AddToPortfolioController');
+  }, 0);
 };
 
 exports.ProjectsByToolController = function($scope, $routeParams, $http, $log) {
@@ -49,7 +84,9 @@ exports.ToolProjectsTwoController = function($scope, $routeParams, $http, $share
         $log.log('projects', $scope.projects);
       });
   };
+
   $scope.load();
+
   setTimeout(function() {
     $scope.$emit('ToolProjectsTwoController');
   }, 0);
@@ -96,9 +133,9 @@ exports.ProjectDetailsController = function($scope, $routeParams, $shareProject,
   }, 0);
 };
 
-exports.MeController = function($scope, $user, $http) {
+exports.MeController = function($scope, $user, $http, $projects) {
   $scope.user = $user;
-
+//TODO: refactor into factory
   $http.
     get('/api/v1/projects').
     success(function(data) {

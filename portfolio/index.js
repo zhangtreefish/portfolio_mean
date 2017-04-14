@@ -37,5 +37,8 @@ app.config(function($routeProvider) {
     }).
     when('/project/:id', {
       template: '<project-details></project-details>'
+    }).
+    when('/users', {
+      template: '<users></users>'
     });
   });
