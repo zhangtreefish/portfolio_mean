@@ -6,8 +6,8 @@
       "data": {
         "oauth": "invalid",
         "portfolio":[
-        	{"project":"ObjectId('58e51d0f6d607c0e90a9db3c')"},
-        	{"project":"ObjectId('58e51d0f6d607c0e90a9db3e')"}
+        	{"project":"58e51d0f6d607c0e90a9db3c"},
+        	{"project":"58e51d0f6d607c0e90a9db3e"}
         ]
       }
     }
