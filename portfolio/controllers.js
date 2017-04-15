@@ -1,20 +1,31 @@
-exports.UsersController = function ($scope, $users, $insertUser, $deleteUser, $http) {
+exports.UsersController = function ($scope, $users, $http, $log) {
 
     //I like to have an init() for controllers that need to perform some initialization. Keeps things in
     //one place...not required though especially in the simple example below
     $scope.load = function() {
-        $scope.users = $users();
-    }
-    $scope.newUser.username = '';
-    $scope.insertUser = function () {
+        //$scope.users = $users;
+      $http.
+        get('/api/v1/users').
+        success(function(data) {
+          $scope.users = data.users;
+          $log.log('users', $scope.users);
+        }).
+        error(function(data, status) {
+          if (status === status.UNAUTHORIZED) {
+            $scope.users = null;
+          }
+        });
+      };
+    //$scope.newUser.username = '';
+    // $scope.insertUser = function () {
 
-        $insertUser();
-        $scope.newUser.username = '';
-    };
+    //     $insertUser();
+    //     $scope.newUser.username = '';
+    // };
 
-    $scope.deleteUser = function (id) {
-        $deleteUser(id);
-    };
+    // $scope.deleteUser = function (id) {
+    //     $deleteUser(id);
+    // };
 
     $scope.load();
 

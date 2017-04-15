@@ -17,8 +17,7 @@
         <br /><br />
         <div class="row">
             <div cardContainer">
-                <div class="span3 card" data-ng-repeat="user in users | orderBy:'lastName'">
-                    <button class="btn close cardClose" data-ng-click="deleteUser(user._id)">&times;</button>
+                <div class="span3 card" ng-repeat="user in users | orderBy:'profile.username'">
                     <div class="cardHeader">{{user.profile.username}}</div>
                     <a href="#/portfolios/{{user._id}}" class="cardBody btn-link">View Portfolio</a>
                 </div>
