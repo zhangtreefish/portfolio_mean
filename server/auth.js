@@ -2,7 +2,8 @@ function setupAuth(User, Config, app) {
   var passport = require('passport');
   var FacebookStrategy = require('passport-facebook').Strategy;
 
-  // High level serialize/de-serialize configuration for passport
+  //Passport serializes and deserializes user instances to and from the login session.
+  //in this case only using _id to keep the cookie small.
   passport.serializeUser(function(user, done) {
     done(null, user._id);
   });

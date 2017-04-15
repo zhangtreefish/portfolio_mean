@@ -25,10 +25,10 @@ module.exports = function(wagner) {
         json({ error: 'Not logged in' });
     }
     //populate: TODO
-    req.user.populate('data.portfolio.project')
-            .exec(handleOne.bind(null, 'user', res)
-    );
-    //req.user.populate({path:'data.portfolio.project', model:'Project'}, handleOne.bind(null, 'user', res));
+    // req.user.populate('data.portfolio.project')
+    //         .exec(handleOne.bind(null, 'user', res)
+    // );
+    req.user.populate({path:'data.portfolio.project', model:'Project'}, handleOne.bind(null, 'user', res));
   });
 
   api.get('/users', wagner.invoke(function(User) {
