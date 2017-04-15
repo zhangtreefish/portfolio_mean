@@ -154,6 +154,7 @@ module.exports = function(wagner) {
     return function(req, res) {
       User.
         findOne({ "_id" : req.params.id }).
+        populate('data.portfolio.project').
         exec(handleOne.bind(null, 'user', res));
     };
   }));
