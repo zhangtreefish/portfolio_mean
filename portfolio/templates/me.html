@@ -1,11 +1,10 @@
-<div class="me-wrapper">
-  <div  ng-repeat="item in projects"
-        class="me-project">
-
-    <div class="project-details">
+<div class="me-wrapper container">
+  <div ng-repeat="item in projects" class="row me-project">
+    <div class="span3 project-details">
       <div class="title">
         {{item.title}}
       </div>
+      <img class="img-responsive" ng-src="{{item.image}}" alt="project image" />
     </div>
     <div style="clear: both"></div>
   </div>
