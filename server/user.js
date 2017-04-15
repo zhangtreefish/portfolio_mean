@@ -18,7 +18,6 @@ module.exports = new mongoose.Schema({
     portfolio: [ {
       project: {
         type: mongoose.Schema.Types.ObjectId,
-        unique: true,
         ref: "Project"
       }
     }]
