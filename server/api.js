@@ -149,6 +149,14 @@ module.exports = function(wagner) {
     };
   }));
 
+  api.get('/user/id/:id', wagner.invoke(function(User) {
+    return function(req, res) {
+      User.
+        findOne({ "_id" : req.params.id }).
+        exec(handleOne.bind(null, 'user', res));
+    };
+  }));
+
   return api;
 };
 

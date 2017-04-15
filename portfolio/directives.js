@@ -26,6 +26,13 @@ exports.projectDetails = function() {
   };
 };
 
+exports.userDetails = function() {
+  return {
+    controller: 'UserDetailsController',
+    templateUrl: '/portfolio/templates/user_details.html'
+  };
+};
+
 exports.projectsByTool = function() {
   return {
     controller: 'ProjectsByToolController',

@@ -144,6 +144,21 @@ exports.ProjectDetailsController = function($scope, $routeParams, $shareProject,
   }, 0);
 };
 
+exports.UserDetailsController = function($scope, $routeParams, $http) {
+  var encoded = encodeURIComponent($routeParams.id);
+  //$scope.user = $shareProject.project;
+
+  $http.
+    get('/api/v1/user/id/' + encoded).
+    success(function(data) {
+      $scope.user = data.user;
+    });
+  //TODO: get projects
+  setTimeout(function() {
+    $scope.$emit('UserDetailsController');
+  }, 0);
+};
+
 exports.MeController = function($scope, $user, $http, $projects) {
   $scope.user = $user;
 //TODO: refactor into factory
