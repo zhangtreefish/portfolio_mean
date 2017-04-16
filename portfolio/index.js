@@ -45,6 +45,6 @@ app.config(function($routeProvider) {
       template: '<projects></projects>'
     }).
     when('/user/:id', {
-      templateUrl: '/portfolio/templates/user_details.html'
+      template: '<user-details></user-details>'
     });
   });

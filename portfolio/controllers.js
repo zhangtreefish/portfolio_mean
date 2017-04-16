@@ -83,25 +83,25 @@ exports.ProjectsByToolController = function($scope, $routeParams, $http, $log) {
   }, 0);
 };
 
-exports.UserDetailsToolProjectsController = function($scope, $routeParams, $http, $shareUserTool, $log) {
-  $scope.selectedTool = $shareUserTool.selectedTool;
-  var encoded = encodeURIComponent($routeParams.id);
-  $log.log('$scope.selectedTool._id', $scope.selectedTool._id);
-  $scope.load = function() {
-    $http.
-      get('/api/v1/user/id/' + encoded).
-      success(function(data) {
-        $scope.user = data.user;
-        $scope.projects = $scope.user.data.portfolio;
-      });
-    };
+// exports.UserDetailsToolProjectsController = function($scope, $routeParams, $http, $shareUserTool, $log) {
+//   $scope.selectedTool = $shareUserTool.selectedTool;
+//   var encoded = encodeURIComponent($routeParams.id);
+//   $log.log('$scope.selectedTool._id', $scope.selectedTool._id);
+//   $scope.load = function() {
+//     $http.
+//       get('/api/v1/user/id/' + encoded).
+//       success(function(data) {
+//         $scope.user = data.user;
+//         $scope.projects = $scope.user.data.portfolio;
+//       });
+//     };
 
-  $scope.load();
+//   $scope.load();
 
-  setTimeout(function() {
-    $scope.$emit('UserDetailsToolProjectsController');
-  }, 0);
-};
+//   setTimeout(function() {
+//     $scope.$emit('UserDetailsToolProjectsController');
+//   }, 0);
+// };
 
 exports.ToolProjectsTwoController = function($scope, $routeParams, $http, $shareTool, $log) {
   $scope.selectedTool = $shareTool.selectedTool;
@@ -163,29 +163,39 @@ exports.ProjectDetailsController = function($scope, $routeParams, $shareProject,
     $scope.$emit('ProjectDetailsController');
   }, 0);
 };
+
 //TODO
-exports.UserDetailsAnyToolController = function($scope, $http, $window, $log, $shareUserTool) {
-  $scope.selectedTool = $shareUserTool.selectedTool;
-  $scope.tools = [];
+exports.UserDetailsController = function($scope, $http, $window, $routeParams, $log) {
+  var tools = [];
   var encoded = encodeURIComponent($routeParams.id);
+
   $scope.load = function() {
     $http.
       get('/api/v1/user/id/' + encoded).
       success(function(data) {
         $scope.user = data.user;
-        data.user.portfolio.forEach(function(p, i) {
-          $scope.tools = $scope.tools.concat(p.project.tools);
+        $log.log('$scope.user', $scope.user);
+        $scope.projects = data.user.data.portfolio;
+
+        $scope.projects.forEach(function(p, i) {
+          tools = tools.concat(p.project.tools);
         });
-        $scope.tools = $scope.tools.filter(function(tool, pos) {
-          return $scope.tools.indexOf(tool) === pos;
+        $log.log('$scope.projects', $scope.projects);
+        $scope.tools = tools.filter(function(tool, pos) {
+          return tools.indexOf(tool) === pos;
         });
+        $log.log('$scope.selectedTool', $scope.selectedTool);
+        $scope.toolProjects = $scope.projects.filter(function(val, pos) {
+          return val.project.tools.indexOf($scope.selectedTool) != -1;
+        });
+        $log.log('$scope.toolProjects', $scope.toolProjects);
       });
     };
 
   $scope.load();
 
   setTimeout(function() {
-    $scope.$emit('UserDetailsAnyToolController');
+    $scope.$emit('UserDetailsController');
   }, 0);
 };
 
