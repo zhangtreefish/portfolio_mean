@@ -97,7 +97,7 @@ exports.ToolProjectsTwoController = function($scope, $routeParams, $http, $share
       });
   };
 
-  $scope.load();
+  //$scope.load();
 
   setTimeout(function() {
     $scope.$emit('ToolProjectsTwoController');
