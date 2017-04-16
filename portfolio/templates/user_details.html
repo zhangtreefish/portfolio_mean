@@ -1,0 +1,25 @@
+<div class="pickTool-wrapper">
+  <div style="clear: both"></div>
+  <div class="cardHeader">Details of User {{user.profile.username}}</div>
+  <form class="pickTool">
+    <label for="pickTool"> Familiar Tools </label>
+    <select
+      name="pickTool"
+      id="pickTool"
+      ng-options="tool as tool for tool in tools"
+      ng-model="selectedTool"
+      ng-change="load()"
+    >
+    </select>
+  </form>
+  <br>
+</div>
+<div class="project-wrapper">
+  <header>Projects utilizing {{selectedTool}}:</header>
+  <div style="clear: both"></div>
+  <div class="project" ng-repeat="project in toolProjects">
+    <div class="cardHeader">{{project.project.title}}</div>
+        <a href="#/portfolios/{{project.project._id}}" class="cardBody btn-link">View Portfolio</a>
+    </div>
+
+</div>

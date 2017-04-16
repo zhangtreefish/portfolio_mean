@@ -83,30 +83,10 @@ exports.ProjectsByToolController = function($scope, $routeParams, $http, $log) {
   }, 0);
 };
 
-// exports.UserDetailsToolProjectsController = function($scope, $routeParams, $http, $shareUserTool, $log) {
-//   $scope.selectedTool = $shareUserTool.selectedTool;
-//   var encoded = encodeURIComponent($routeParams.id);
-//   $log.log('$scope.selectedTool._id', $scope.selectedTool._id);
-//   $scope.load = function() {
-//     $http.
-//       get('/api/v1/user/id/' + encoded).
-//       success(function(data) {
-//         $scope.user = data.user;
-//         $scope.projects = $scope.user.data.portfolio;
-//       });
-//     };
-
-//   $scope.load();
-
-//   setTimeout(function() {
-//     $scope.$emit('UserDetailsToolProjectsController');
-//   }, 0);
-// };
-
 exports.ToolProjectsTwoController = function($scope, $routeParams, $http, $shareTool, $log) {
   $scope.selectedTool = $shareTool.selectedTool;
   var encode = $shareTool.selectedTool._id;
-  $log.log('$scope.selectedTool._is', $scope.selectedTool._id);
+  $log.log('$scope.selectedTool._id', $scope.selectedTool._id);
   $scope.load = function() {
     $http.
       get('/api/v1/projects/tool/' + $scope.selectedTool._id).
@@ -164,7 +144,6 @@ exports.ProjectDetailsController = function($scope, $routeParams, $shareProject,
   }, 0);
 };
 
-//TODO
 exports.UserDetailsController = function($scope, $http, $window, $routeParams, $log) {
   var tools = [];
   var encoded = encodeURIComponent($routeParams.id);

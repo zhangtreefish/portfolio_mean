@@ -1,20 +1,19 @@
 <div class="project-wrapper">
   <header>Projects utilizing {{tool}} </header>
   <div style="clear: both"></div>
-  <div class="project" ng-repeat="project in projects">
+  <div class="project" ng-repeat="p in projects">
     <div class="project-details-content">
       <div class="project-image">
-        <img ng-src="{{project.image}}" />
+        <img ng-src="{{p.image}}" />
       </div>
       <div class="project-title">
         <a ng-href="#/project/{{project._id}}">
-          {{project.title}}
+          {{p.title}}
         </a>
       </div>
       <div class="project-description">
-        {{project.description}}
+        {{p.description}}
       </div>
-      <div> hi</div>
       <add-to-portfolio></add-to-portfolio>
       <div style="clear: both"></div>
     </div>
