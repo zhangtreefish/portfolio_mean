@@ -35,8 +35,9 @@ exports.UsersController = function ($scope, $users, $http, $log) {
 };
 
 exports.CustomFooterController = function($window, $scope) {
-  $scope.goLinkedIn = function() {
-    $window.location.href = "www.linkedin.com/in/zhangshuyu";
+  $scope.liurl = 'https://www.linkedin.com/in/zhangshuyu';
+  $scope.goLinkedIn = function(url) {
+    $window.open(url);
   };
 };
 
@@ -165,7 +166,7 @@ exports.UserDetailsController = function($scope, $http, $window, $routeParams, $
         });
         $log.log('$scope.selectedTool', $scope.selectedTool);
         $scope.toolProjects = $scope.projects.filter(function(val, pos) {
-          return val.project.tools.indexOf($scope.selectedTool) != -1;
+          return val.project.tools.indexOf($scope.selectedTool) !== -1;
         });
         $log.log('$scope.toolProjects', $scope.toolProjects);
       });

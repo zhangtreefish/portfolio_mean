@@ -15,7 +15,7 @@ exports.navBar = function() {
 exports.customFooter = function() {
   return {
     controller: 'CustomFooterController',
-    templateUrl: '/portfolio/templates/footer.html'
+    templateUrl: '/portfolio/templates/custom_footer.html'
   }
 };
 
