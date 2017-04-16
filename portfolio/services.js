@@ -76,7 +76,9 @@ var s = {};
 exports.$shareTool = function() {
   return {selectedTool: {_id: 'javascript'}};
 };
-
+exports.$shareUserTool = function() {
+  return {selectedTool: {_id: 'javascript'}};
+};
 exports.$shareProject = function() {
   return {selectedProject: {}};
 };

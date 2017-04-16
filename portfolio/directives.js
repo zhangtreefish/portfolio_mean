@@ -53,14 +53,24 @@ exports.anyToolTwo = function() {
     templateUrl: '/portfolio/templates/any_tool_two.html'
   }
 };
-
+exports.userDetailAnyTool = function() {
+  return {
+    controller: 'UserDetailAnyToolController',
+    templateUrl: '/portfolio/templates/any_tool_two.html'
+  }
+};
 exports.toolProjectsTwo = function() {
   return {
     controller: 'ToolProjectsTwoController',
     templateUrl: '/portfolio/templates/tool_projects_two.html'
   }
 };
-
+exports.userDetailToolProjects = function() {
+  return {
+    controller: 'UserDetailToolProjectsController',
+    templateUrl: '/portfolio/templates/tool_projects_two.html'
+  }
+};
 exports.me = function() {
   return {
     controller: 'MeController',

@@ -83,6 +83,26 @@ exports.ProjectsByToolController = function($scope, $routeParams, $http, $log) {
   }, 0);
 };
 
+exports.UserDetailsToolProjectsController = function($scope, $routeParams, $http, $shareUserTool, $log) {
+  $scope.selectedTool = $shareUserTool.selectedTool;
+  var encoded = encodeURIComponent($routeParams.id);
+  $log.log('$scope.selectedTool._id', $scope.selectedTool._id);
+  $scope.load = function() {
+    $http.
+      get('/api/v1/user/id/' + encoded).
+      success(function(data) {
+        $scope.user = data.user;
+        $scope.projects = $scope.user.data.portfolio;
+      });
+    };
+
+  $scope.load();
+
+  setTimeout(function() {
+    $scope.$emit('UserDetailsToolProjectsController');
+  }, 0);
+};
+
 exports.ToolProjectsTwoController = function($scope, $routeParams, $http, $shareTool, $log) {
   $scope.selectedTool = $shareTool.selectedTool;
   var encode = $shareTool.selectedTool._id;
@@ -143,19 +163,29 @@ exports.ProjectDetailsController = function($scope, $routeParams, $shareProject,
     $scope.$emit('ProjectDetailsController');
   }, 0);
 };
-
-exports.UserDetailsController = function($scope, $routeParams, $http) {
+//TODO
+exports.UserDetailsAnyToolController = function($scope, $http, $window, $log, $shareUserTool) {
+  $scope.selectedTool = $shareUserTool.selectedTool;
+  $scope.tools = [];
   var encoded = encodeURIComponent($routeParams.id);
-  //$scope.user = $shareProject.project;
+  $scope.load = function() {
+    $http.
+      get('/api/v1/user/id/' + encoded).
+      success(function(data) {
+        $scope.user = data.user;
+        data.user.portfolio.forEach(function(p, i) {
+          $scope.tools = $scope.tools.concat(p.project.tools);
+        });
+        $scope.tools = $scope.tools.filter(function(tool, pos) {
+          return $scope.tools.indexOf(tool) === pos;
+        });
+      });
+    };
 
-  $http.
-    get('/api/v1/user/id/' + encoded).
-    success(function(data) {
-      $scope.user = data.user;
-    });
-  //TODO: get projects
+  $scope.load();
+
   setTimeout(function() {
-    $scope.$emit('UserDetailsController');
+    $scope.$emit('UserDetailsAnyToolController');
   }, 0);
 };
 
