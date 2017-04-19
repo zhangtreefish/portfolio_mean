@@ -1,3 +1,7 @@
+:root {
+  font-size: calc( 16px + (32 - 16) * ( (100vw - 400px) / ( 1200 - 320)));
+}
+
 /* Bootstrap overrides from D wahlins */
 .navbar-inner {
     -webkit-border-radius: 0px;
@@ -147,54 +151,6 @@ a {
   position: relative;
 }
 
-/** tool tree **/
-
-.tool-tree-wrapper .crumb {
-  display: inline-block;
-}
-
-.tool-tree-wrapper .divider {
-  color: #BDBDBD;
-  display: inline-block;
-  margin-right: 5px;
-}
-
-.tool-tree-wrapper .child-categories {
-  display: inline-block;
-  position: relative;
-}
-
-.tool-tree-wrapper .child-arrow {
-  display: inline-block;
-  text-align: right;
-  width: 100px;
-  border: 1px solid #dfdfdf;
-  border-radius: 3px;
-  padding: 2px;
-  cursor: pointer;
-  color: #CC4A14;
-}
-
-.tool-tree-wrapper .tool-select {
-  position: absolute;
-  background-color: #fdfdfd;
-  width: 100px;
-  padding: 2px;
-  cursor: pointer;
-  left: 14px;
-  top: 20px;
-  border-bottom: 1px solid #dfdfdf;
-  border-left: 1px solid #dfdfdf;
-  border-right: 1px solid #dfdfdf;
-  border-radius: 3px;
-}
-
-.tool-tree-wrapper .tool-select div {
-  margin-top: 3px;
-  padding-top: 3px;
-  border-top: 1px solid #ffffff;
-}
-
 /* Product directive */
 
 .project-wrapper {
@@ -217,7 +173,7 @@ a {
 }
 
 .project, .pickTool {
-  border: 1px solid #54CC14;
+  border: 1px solid #02b3e4;
   border-radius: 5px;
   padding: 5px;
   background-color: #fdfdfd;
@@ -229,7 +185,6 @@ a {
   padding-bottom: 10px;
 }
 
-
 #pickTool {
   width: 200px;
   height: 2em;
@@ -239,6 +194,9 @@ a {
   max-height: 2em;
   height: 2em;
   overflow: hidden;
+  background-color: #02b3e4;
+  color: #CC4A14;
+  padding-top: 0.3em;
 }
 
 .project .project-image img {
@@ -248,9 +206,9 @@ a {
 }
 
 .project .project-description {
-  font-size: 0.75em;
   color: #666666;
-  margin-top: 0.25em;
+  font-size: 0.9em;
+  overflow: auto;
 }
 
 .project .portfolio-button {
@@ -291,7 +249,7 @@ a {
   width: 180px;
   font-size: 24px;
   color: white;
-  background-color: #CC4A14;
+  background-color: #F07C17;
   padding: 10px;
   margin-top: 20px;
   border-radius: 5px;
@@ -299,7 +257,7 @@ a {
   text-align: center;
 }
 
-/* checkout */
+/* me */
 
 .me-wrapper .me-project {
   margin: 5px;
@@ -380,32 +338,6 @@ a {
   text-align: center;
 }
 
-.search-bar-wrapper .search-bar-input {
-  display: inline-block;
-  font-size: 24px;
-  border-radius: 3px;
-  padding: 5px;
-  border: 1px solid #666666;
-  width: 600px;
-  margin: 50px;
-}
-
-.search-bar-wrapper .autocomplete-results {
-  position: absolute;
-  left: 190px;
-  top: 90px;
-  width: 599px;
-  border-left: 1px solid #666666;
-  border-right: 1px solid #666666;
-  border-radius: 3px;
-}
-
-.search-bar-wrapper .autocomplete-result {
-  padding: 5px;
-  font-size: 24px;
-  border-bottom: 1px solid #666666;
-  border-radius: 3px;
-}
 /*make bigger*/
 .user-info .user img {
   width: 30px;
