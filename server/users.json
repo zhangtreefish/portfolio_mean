@@ -1,14 +1,45 @@
-[   {
-      "profile": {
-        "username": "treefish",
-        "picture": "http://i.imgur.com/5r0DB0H.jpg"
-      },
-      "data": {
-        "oauth": "invalid",
-        "portfolio":[
-        	{"project":"58e51d0f6d607c0e90a9db3c"},
-        	{"project":"58e51d0f6d607c0e90a9db3e"}
-        ]
-      }
-    }
-]
+[{
+    "_id": "58efc048ffabb8bd291c26a3",
+    "data": {
+      "oauth": "invalid",
+      "portfolio": [{
+        "project": {
+          "_id": "58e51d0f6d607c0e90a9db3c"
+        }
+      }, {
+        "project": {
+          "_id": "58e51d0f6d607c0e90a9db3e"
+        }
+      }]
+    },
+    "profile": {
+      "username": "treefish",
+      "picture": "http://i.imgur.com/5r0DB0H.jpg"
+    },
+    "id": "58efc048ffabb8bd291c26a3"
+  }, {
+    "_id": "58efc09effabb8bd291c4c2d",
+    "__v": 1,
+    "data": {
+      "oauth": "10211771712150283",
+      "portfolio": [{
+        "project": {
+          "_id": "58e51d0f6d607c0e90a9db3f"
+        }
+      }, {
+        "project": {
+          "_id": "58e51d0f6d607c0e90a9db44"
+        }
+      }, {
+        "project": {
+          "_id": "58e51d0f6d607c0e90a9db49"
+        }
+      }]
+    },
+    "profile": {
+      "picture": "http://graph.facebook.com/10211771712150283/picture?type=large",
+      "username": "zhangtreefish@yahoo.com"
+    },
+    "id": "58efc09effabb8bd291c4c2d"
+  }]
+}

@@ -3,7 +3,7 @@ let mongoose = require('mongoose');
 module.exports = function(goose_for_db) {
   let projectSchema = {
     id: { type: String, required: [true, 'why no id?'] },
-    genre: { type: String, enum: ['full stack', 'front-end', 'back-end'], required: [true, 'why no genre?']},
+    genre: { type: String, enum: ['full stack', 'front-end', 'back-end', 'database'], required: [true, 'why no genre?']},
     title: { type: String, required: [true, 'why no title?']},
     year_start: { type: Number, required: [true, 'why no year_start?']},
     year_end: { type: Number },
