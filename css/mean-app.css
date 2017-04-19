@@ -19,10 +19,15 @@ body {
 #push,
 #footer {
     height: 50px;
+    font-size: 1.5em;
 }
 
 #footer {
     background-color: transparent;
+}
+
+#footer .col {
+  display: inline-block;
 }
 
 body {
@@ -121,10 +126,13 @@ a {
 
 .crumbs .crumb {
   display: inline-block;
+  color: black;
 }
-
+.crumbs .crumb a{
+  color: black !important;
+}
 .crumbs .divider {
-  color: #BDBDBD;
+  /*color: #BDBDBD;*/
   display: inline-block;
   margin-right: 5px;
 }
@@ -203,11 +211,15 @@ a {
 
 .project-details .project-details-content {
   margin-top: 15px;
+  border: 1px solid #BDBDBD;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .project-details .image-left {
   float: left;
   margin-right: 25px;
+  margin-left: 25px;
 }
 
 .project-details .image-left img {
@@ -232,6 +244,7 @@ a {
   background-color: #F07C17;
   padding: 10px;
   margin-top: 20px;
+  margin-left: 25px;
   border-radius: 5px;
   display: inline-block;
   text-align: center;
@@ -343,6 +356,11 @@ a {
 /*make bigger*/
 .user-info .user img {
   width: 30px;
+}
+
+.about a {
+  color: black;
+  font-size: 2.0em;
 }
 
 @media screen  and (max-width: 350px) {
