@@ -1,17 +1,7 @@
 :root {
-  font-size: calc( 16px + (32 - 16) * ( (100vw - 400px) / ( 1200 - 320)));
+  font-size: calc( 25px + (32 - 25) * ( (100vw - 320px) / ( 1200 - 320)));
 }
 
-/* Bootstrap overrides from D wahlins */
-.navbar-inner {
-    -webkit-border-radius: 0px;
-    border-radius: 0px;
-}
-
-.navbar .nav {
-    margin-left:50px;
-    margin-top:15px;
-}
 html,
 body {
     height: 100%;
@@ -21,7 +11,7 @@ body {
     min-height: 100%;
     height: auto !important;
     height: 100%;
-    /* Negative indent footer by it's height */
+    /* Negative indent footer by its height */
     margin: 0 auto -30px;
 }
 
@@ -32,7 +22,7 @@ body {
 }
 
 #footer {
-    background-color: #f5f5f5;
+    background-color: transparent;
 }
 
 body {
@@ -43,10 +33,10 @@ body {
 }
 
 .content-wrapper {
-  width: 980px;
+  width: 100%;
   margin: auto;
   position: relative;
-  background-color: #F9F9F9;
+  background-color: #CC4A14;
   margin-top: 30px;
   border-radius: 5px;
   padding: 10px;
@@ -72,24 +62,18 @@ a {
 .nav-bar {
   width: 100%;
   position: relative;
-  background-color: #F9F9F9;
+  background-color: transparent;
   border-bottom: 1px solid #bdbdbd;
 }
 
 .nav-bar-contents {
-  width: 1000px;
+  width: 100%;
   margin: auto;
   position: relative;
 }
 
 .nav-bar .logo {
   display: inline-block;
-}
-
-.nav-bar .logo img {
-  width: 30px;
-  height: 30px;
-  margin-top: 5px;
 }
 
 .nav-bar .title {
@@ -102,7 +86,7 @@ a {
 
 .nav-bar .checkout {
   position: absolute;
-  font-size: 20px;
+  /*font-size: 20px;*/
   right: 42px;
   top: 5px;
   background-color: #CC4A14;
@@ -115,6 +99,7 @@ a {
 }
 
 .nav-bar .user-info {
+  display: inline-block;
   position: absolute;
   right: 0px;
   top: 0px;
@@ -162,7 +147,6 @@ a {
 .project-wrapper .sort-arrow {
   float: right;
   color: #666666;
-  font-size: 0.75em;
   cursor: pointer;
   margin-bottom: 3px;
   margin-right: 8px;
@@ -172,12 +156,12 @@ a {
   margin-left: 0.5em;
 }
 
-.project, .pickTool {
+.project {
   border: 1px solid #02b3e4;
   border-radius: 5px;
   padding: 5px;
   background-color: #fdfdfd;
-  width: 225px;
+  width: 320px;
   margin: 5px;
   float: left;
   text-align: center;
@@ -185,13 +169,9 @@ a {
   padding-bottom: 10px;
 }
 
-#pickTool {
-  width: 200px;
-  height: 2em;
-}
-
 .project .project-title {
   max-height: 2em;
+  border-radius: 5px;
   height: 2em;
   overflow: hidden;
   background-color: #02b3e4;
@@ -200,14 +180,14 @@ a {
 }
 
 .project .project-image img {
-  width: 200px;
+  width: 300px;
   height: 200px;
   margin-bottom: 5px;
 }
 
 .project .project-description {
   color: #666666;
-  font-size: 0.9em;
+  /*font-size: 0.9em;*/
   overflow: auto;
 }
 
@@ -338,7 +318,40 @@ a {
   text-align: center;
 }
 
+.pickTool {
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #02b3e4;
+  width: 320px;
+  height: 4.0em;
+  max-width: 100%;
+  margin: 5px;
+  float: left;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#pickTool {
+  border-radius: 5px;
+  border: 3px inset #ccc;
+  width: 60%;
+  height: 3.0em;
+  font: 2.0em !important;
+}
+
 /*make bigger*/
 .user-info .user img {
   width: 30px;
 }
+
+@media screen  and (max-width: 350px) {
+        body{background-color: #CC4A14;}
+      }
+
+
+body {background-color: green;}
+
+@media screen and (min-width: 800px) {
+        body {background-color: #02b3e4;}
+      }
