@@ -20,10 +20,10 @@
     "gulp-mocha": "2.0.1"
   },
   "scripts": {
-    "testdb": "mocha test_db.js",
-    "testapi": "mocha test_api.js",
-    "testauth": "mocha test_auth.js",
+    "testdb": "mocha server/test_db.js",
+    "testapi": "mocha server/test_api.js",
+    "testauth": "mocha server/test_auth.js",
     "watch": "gulp watch",
-    "start": "server/index.js"
+    "start": "node server/index.js"
   }
 }

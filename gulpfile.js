@@ -5,7 +5,7 @@ var gutil = require('gulp-util');
 gulp.task('testdb', function() {
   var error = false;
   gulp.
-    src('./test_db.js').
+    src('./server/test_db.js').
     pipe(mocha({reporter: 'nyan'})).
     on('error', gutil.log);
 });
@@ -13,7 +13,7 @@ gulp.task('testdb', function() {
 gulp.task('testapi', function() {
   var error = false;
   gulp.
-    src('./test_api.js').
+    src('./server/test_api.js').
     pipe(mocha({reporter: 'nyan'})).
     on('error', gutil.log);
 });
@@ -21,11 +21,11 @@ gulp.task('testapi', function() {
 gulp.task('testauth', function() {
   var error = false;
   gulp.
-    src('./test_auth.js').
+    src('./server/test_auth.js').
     pipe(mocha({reporter: 'nyan'})).
     on('error', gutil.log);
 });
 
 gulp.task('watch', function() {
-  gulp.watch(['./test_*.js', './interface.js', './api.js', './auth.js'], ['testdb', 'testapi', 'testauth']);
+  gulp.watch(['./server/test_*.js', './server/interface.js', './server/api.js', './server/auth.js'], ['testdb', 'testapi', 'testauth']);
 });
