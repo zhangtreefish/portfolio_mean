@@ -51,8 +51,8 @@
 		"title": "Blog Bottle Mongo",
 		"year_start": 2017,
 		"year_end": 2017,
-		"description": "Portfolio Builder where the coder showcases her projects and skills",
-		"image": "https://i.imgur.com/rxsq0Xn.jpg",
+		"description": "Built a blog where the user adds new posts and comments on posts",
+		"image": "http://i.imgur.com/rxsq0Xn.jpg",
 		"code": "https://github.com/zhangtreefish/blog_bottle_mongo.git",
 		"tools": ["mongodb", "python", "pymongo", "bottle"]
 	}, {
@@ -108,7 +108,7 @@
 		"title": "Portfolio Builder",
 		"year_start": 2017,
 		"description": "Built a MEAN-stack app featuring users and projects where projects can be viewed by their tool sets",
-		"image": "https://i.imgur.com/vT4eJpU.jpg",
+		"image": "http://i.imgur.com/vT4eJpU.jpg",
 		"code": "https://github.com/zhangtreefish/portfolio_mean.git",
 		"tools": ["mongodb", "node.js", "express", "angularjs", "mongodb-atlas", "javascript", "mongoose", "mocha", "gulp", "karma"]
 	}, {
@@ -119,7 +119,7 @@
 		"year_start": 2015,
 		"year_end": 2015,
 		"description": "Built JSONs and dynamically add information to a resume template through jQuery",
-		"image": "https://i.imgur.com/78mvBFX.jpg",
+		"image": "http://i.imgur.com/78mvBFX.jpg",
 		"url": "http://zhangtreefish.github.io/Project-2-for-Front-End-Web-Developer-Nanodegree",
 		"code": "https://github.com/zhangtreefish/Project-2-for-Front-End-Web-Developer-Nanodegree",
 		"tools": ["json", "jquery", "javascript"]

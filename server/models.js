@@ -1,17 +1,18 @@
-let mongoose = require('mongoose');
-let _ = require('underscore');
+var mongoose = require('mongoose');
+var _ = require('underscore');
+var dburi = require('./dburi');
 
 module.exports = function(wagner) {
-  let options = { promiseLibrary: require('bluebird') };
-  let uri = 'mongodb://ztf:X2d4jx@cluster0-shard-00-00-of9bu.mongodb.net:27017,cluster0-shard-00-01-of9bu.mongodb.net:27017,cluster0-shard-00-02-of9bu.mongodb.net:27017/portfolio?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin'
-  mongoose.connect(uri, options);
+  var options = { promiseLibrary: require('bluebird') };
+
+  mongoose.connect(dburi, options);
   //If using local db: mongoose.connect('mongodb://localhost:27017/portfolio');
 
   wagner.factory('goose_for_db', function() {
     return mongoose;
   });
-  let User = mongoose.model('User', require('./user'), 'users');
-  let models = {
+  var User = mongoose.model('User', require('./user'), 'users');
+  var models = {
     User: User
   };
   _.each(models, function(value, key) {
