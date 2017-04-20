@@ -180,6 +180,7 @@
                     "year_end": 2017,
                     "description": "Portfolio Builder where the coder showcases her projects and skills",
                     "tools": ["mongodb", "python", "pymongo", "bottle"],
+                    "image": "https://i.imgur.com/rxsq0Xn.jpg",
                     "code": "https://github.com/zhangtreefish/blog_bottle_mongo.git"
                 },
                 {
@@ -189,6 +190,7 @@
                     "year_start": 2017,
                     "description": "Portfolio Builder where the coder showcases her projects and skills",
                     "tools": ["mongodb", "node.js", "express", "angular", "mongodb-atlas", "javascript", "mongoose"],
+                    "image": "http://i.imgur.com/vT4eJpU.jpg",
                     "code": "git@bitbucket.org:treefish/portfolio_mean.git"
                 }
             ]}
