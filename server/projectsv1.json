@@ -1,5 +1,4 @@
-{
-	"projects": [{
+[{
 		"_id": "58e51d0f6d607c0e90a9db3c",
 		"id": "3",
 		"genre": "front-end",
@@ -196,4 +195,3 @@
 		"code": "https://github.com/zhangtreefish/Project-4-for-Front-End-Web-Developer-Nanodegree",
 		"tools": ["google-chrome-devtools", "javascript"]
 	}]
-}
