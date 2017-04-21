@@ -1,5 +1,4 @@
 [{
-		"_id": "58e51d0f6d607c0e90a9db3c",
 		"id": "3",
 		"genre": "front-end",
 		"title": "A Frogger Game",
@@ -11,7 +10,6 @@
 		"code": "https://github.com/zhangtreefish/Project-3-for-Front-End-Web-Developer-Nanodegree",
 		"tools": ["javascript", "oop", "canvas", "requestanimationframe"]
 	}, {
-		"_id": "58e51d0f6d607c0e90a9db3f",
 		"id": "6",
 		"genre": "full stack",
 		"title": "A Movie Site",
@@ -23,7 +21,6 @@
 		"code": "https://github.com/zhangtreefish/Project-1-for-Full-Stack-Web-Developer-Nanodegree.git",
 		"tools": ["python", "python webbrowser, re, os"]
 	}, {
-		"_id": "58e51d0f6d607c0e90a9db3e",
 		"id": "5",
 		"genre": "database",
 		"title": "A Tournament Database",
@@ -33,7 +30,6 @@
 		"code": "https://github.com/psycopg/psycopg2.git",
 		"tools": ["psql", "vagrant", "python", "postgresql", "psycopg2"]
 	}, {
-		"_id": "58e51d0f6d607c0e90a9db44",
 		"id": "11",
 		"genre": "front-end",
 		"title": "Ajax",
@@ -45,7 +41,6 @@
 		"code": "https://github.com/zhangtreefish/minicourse-ajax-project",
 		"tools": ["ajax", "jquery", "google-street-view", "wikipedia-api", "ny-times-api", "javascript"]
 	}, {
-		"_id": "58e51d0f6d607c0e90a9db49",
 		"id": "16",
 		"genre": "full stack",
 		"title": "Blog Bottle Mongo",
@@ -56,7 +51,6 @@
 		"code": "https://github.com/zhangtreefish/blog_bottle_mongo.git",
 		"tools": ["mongodb", "python", "pymongo", "bottle"]
 	}, {
-		"_id": "58e51d0f6d607c0e90a9db48",
 		"id": "15",
 		"genre": "full stack",
 		"title": "Java Blog",
@@ -66,7 +60,6 @@
 		"code": "https://github.com/zhangtreefish/java_blog.git",
 		"tools": ["mongodb", "spark", "freemarker", "netbeans", "maven", "java", "morphia"]
 	}, {
-		"_id": "58e51d0f6d607c0e90a9db43",
 		"id": "10",
 		"genre": "front-end",
 		"title": "Mockup",
@@ -78,7 +71,6 @@
 		"code": "https://github.com/zhangtreefish/Project-1-for-Udacity-Front-End-Web-Developer-Nanodegree",
 		"tools": ["html5", "css3", "javascript"]
 	}, {
-		"_id": "58e51d0f6d607c0e90a9db47",
 		"id": "14",
 		"genre": "full stack",
 		"title": "Multi User Blog",
@@ -90,7 +82,6 @@
 		"code": "https://github.com/zhangtreefish/blog",
 		"tools": ["webapp2", "google-cloud-endpoints", "python", "app-engine-ndb", "google-cloud-datastore"]
 	}, {
-		"_id": "58e51d0f6d607c0e90a9db46",
 		"id": "13",
 		"genre": "front-end",
 		"title": "Neighborhood Search",
@@ -102,7 +93,6 @@
 		"code": "https://github.com/zhangtreefish/Project-5-for-Front-End-Web-Developer-Nanodegree",
 		"tools": ["knockout.js", "jquery", "javascript", "google-maps"]
 	}, {
-		"_id": "58e51d0f6d607c0e90a9db4a",
 		"id": "17",
 		"genre": "full stack",
 		"title": "Portfolio Builder",
@@ -112,7 +102,6 @@
 		"code": "https://github.com/zhangtreefish/portfolio_mean.git",
 		"tools": ["mongodb", "node.js", "express", "angularjs", "mongodb-atlas", "javascript", "mongoose", "mocha", "gulp", "karma"]
 	}, {
-		"_id": "58e51d0f6d607c0e90a9db42",
 		"id": "9",
 		"genre": "front-end",
 		"title": "Resume Page",
@@ -124,7 +113,6 @@
 		"code": "https://github.com/zhangtreefish/Project-2-for-Front-End-Web-Developer-Nanodegree",
 		"tools": ["json", "jquery", "javascript"]
 	}, {
-		"_id": "58e51d0f6d607c0e90a9db3b",
 		"id": "2",
 		"genre": "full stack",
 		"title": "Therapeutic Foods",
@@ -136,7 +124,6 @@
 		"code": "https://github.com/zhangtreefish/Project-3-for-Full-Stack-Nanodegree-at-Udacity",
 		"tools": ["amazon-web-services", "apache2", "postgresql", "ubuntu", "linux", "flask", "jinja2", "python", "json", "sqlalchemy", "oauth2"]
 	}, {
-		"_id": "58e51d0f6d607c0e90a9db3d",
 		"id": "4",
 		"genre": "back-end",
 		"title": "Tictactoe Game API",
@@ -148,7 +135,6 @@
 		"code": "https://github.com/zhangtreefish/Project-4-for-Full-Stack-Nanodegree-at-Udacity.git",
 		"tools": ["google-app-engine", "python"]
 	}, {
-		"_id": "58e51d0f6d607c0e90a9db3a",
 		"id": "1",
 		"genre": "front-end",
 		"title": "Tour of Projects",
@@ -160,7 +146,6 @@
 		"code": "https://github.com/zhangtreefish/treefishportfolio.git",
 		"tools": ["angular", "typescript", "angular-cli", "selenium", "webdriverio", "node.js", "jasmine", "javascript"]
 	}, {
-		"_id": "58e51d0f6d607c0e90a9db45",
 		"id": "12",
 		"genre": "front-end",
 		"title": "Udacity Alumni App",
@@ -171,7 +156,6 @@
 		"code": "https://github.com/udacityalumni/alumni-client",
 		"tools": ["react", "redux", "scalable-react-boilerplate", "grommet", "node.js", "apollo", "graphql", "javascript"]
 	}, {
-		"_id": "58e51d0f6d607c0e90a9db40",
 		"id": "7",
 		"genre": "front-end",
 		"title": "Unit Test with Jasmine",
@@ -183,7 +167,6 @@
 		"code": "https://github.com/zhangtreefish/Project-6-for-Front-End-Web-Developer-Nanodegree",
 		"tools": ["jasmine", "javascript"]
 	}, {
-		"_id": "58e51d0f6d607c0e90a9db41",
 		"id": "8",
 		"genre": "front-end",
 		"title": "Web Performance Optimization",

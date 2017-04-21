@@ -16,9 +16,10 @@
 </div>
 <div class="project-wrapper">
   <div style="clear: both"></div>
-  <div class="project" ng-repeat="project in toolProjects">
-    <div class="cardHeader">{{project.project.title}}</div>
-        <a href="#/project/{{project.project._id}}" class="cardBody btn-link">View Portfolio</a>
+  <div class="project" ng-repeat="project in projects">
+    <div class="cardHeader">
+        <a href="#/project/{{project.project._id}}" class="cardBody btn-link"> {{project.project.title}}
+        </a>
     </div>
-
+  </div>
 </div>

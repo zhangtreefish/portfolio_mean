@@ -126,14 +126,12 @@ exports.NavBarController = function($scope, $user) {
 };
 
 exports.ProjectDetailsController = function($scope, $routeParams, $http, $log) {
-  $log.log('$routeParams.id', $routeParams.id);
   var encoded = encodeURIComponent($routeParams.id);
   $scope.load = function() {
     $http.
       get('/api/v1/project/' + encoded).
       success(function(data) {
         $scope.project = data.project;
-        $log.log('data.project', data.project);
       });
     };
 
@@ -157,13 +155,18 @@ exports.UserDetailsController = function($scope, $http, $window, $routeParams, $
         $scope.projects = data.user.data.portfolio;
 
         $scope.projects.forEach(function(p, i) {
-          tools = tools.concat(p.project.tools);
-        });
-        $log.log('$scope.projects', $scope.projects);
+          $http.
+            get('/api/v1/project/' + p.id).
+            success(function(data) {
+              tools.concat(data.project.tools);
+          })
+        };
+
+        $log.log('tools', tools);
         $scope.tools = tools.filter(function(tool, pos) {
           return tools.indexOf(tool) === pos;
         });
-        $log.log('$scope.selectedTool', $scope.selectedTool);
+        $log.log('$scope.tools', $scope.tools);
         $scope.toolProjects = $scope.projects.filter(function(val, pos) {
           return val.project.tools.indexOf($scope.selectedTool) !== -1;
         });
