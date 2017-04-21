@@ -17,3 +17,6 @@ There are two Mongoose Models for the database: User and Projects. User contains
 5. Open "http://localhost:3000/auth/facebook" to authenticate at Facebook. Go to "http://localhost:3000/api/v1/me" to verify successful authentication;
 
 6. Verify api using curl, such as `curl http://localhost:3000/api/v1/project/id/1`.
+
+##References:
+1. `__dirname`: where executing script resides; `.`: where node command is issued. http://stackoverflow.com/questions/8131344/what-is-the-difference-between-dirname-and-in-node-js#
