@@ -73,7 +73,6 @@ exports.ProjectsByToolController = function($scope, $routeParams, $http, $log) {
       get('/api/v1/projects/tool/' + encoded).
       success(function(data) {
         $scope.projects = data.projects;
-        $log.log('projects', $scope.projects);
       });
   };
 
@@ -92,7 +91,6 @@ exports.ToolProjectsTwoController = function($scope, $routeParams, $http, $share
       get('/api/v1/projects/tool/' + $scope.selectedTool._id).
       success(function(data) {
         $scope.projects = data.projects;
-        $log.log('projects', $scope.projects);
       });
   };
 
@@ -127,15 +125,19 @@ exports.NavBarController = function($scope, $user) {
   }, 0);
 };
 
-exports.ProjectDetailsController = function($scope, $routeParams, $shareProject, $http) {
+exports.ProjectDetailsController = function($scope, $routeParams, $http, $log) {
+  $log.log('$routeParams.id', $routeParams.id);
   var encoded = encodeURIComponent($routeParams.id);
-  $scope.project = $shareProject.project;
+  $scope.load = function() {
+    $http.
+      get('/api/v1/project/' + encoded).
+      success(function(data) {
+        $scope.project = data.project;
+        $log.log('data.project', data.project);
+      });
+    };
 
-  $http.
-    get('/api/v1/project/id/' + encoded).
-    success(function(data) {
-      $scope.project = data.project;
-    });
+  $scope.load();
 
   setTimeout(function() {
     $scope.$emit('ProjectDetailsController');
@@ -144,11 +146,11 @@ exports.ProjectDetailsController = function($scope, $routeParams, $shareProject,
 
 exports.UserDetailsController = function($scope, $http, $window, $routeParams, $log) {
   var tools = [];
-  var encoded = encodeURIComponent($routeParams.id);
+  var encoded = encodeURIComponent($routeParams.username);
 
   $scope.load = function() {
     $http.
-      get('/api/v1/user/id/' + encoded).
+      get('/api/v1/user/' + encoded).
       success(function(data) {
         $scope.user = data.user;
         $log.log('$scope.user', $scope.user);

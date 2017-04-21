@@ -19,7 +19,7 @@
             <div cardContainer">
                 <div class="span3 card" ng-repeat="user in users | orderBy:'profile.username'">
                     <div class="cardHeader">{{user.profile.username}}</div>
-                    <a href="#/user/{{user._id}}" class="cardBody btn-link">View Portfolio</a>
+                    <a href="#/user/{{user.profile.username}}" class="cardBody btn-link">View Portfolio</a>
                 </div>
             </div>
         </div>

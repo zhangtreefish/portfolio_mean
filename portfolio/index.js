@@ -41,7 +41,7 @@ app.config(function($routeProvider) {
     when('/users', {
       template: '<users></users>'
     }).
-    when('/user/:id', {
+    when('/user/:username', {
       template: '<user-details></user-details>'
     });
   });

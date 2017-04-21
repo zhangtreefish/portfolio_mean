@@ -1,10 +1,10 @@
 <div class="project-wrapper">
-  <header>Projects utilizing {{tool}} </header>
+  <h3>Projects utilizing {{tool}} </h3>
   <div style="clear: both"></div>
   <div class="project" ng-repeat="p in projects">
     <div class="project-details-content">
       <div class="project-image">
-        <img ng-src="{{p.image}}" />
+        <img ng-src="{{p.image}}" alt="project image"/>
       </div>
       <div class="project-title">
         <a ng-href="#/project/{{project._id}}">

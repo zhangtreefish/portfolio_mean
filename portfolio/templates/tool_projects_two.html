@@ -2,10 +2,10 @@
   <div style="clear: both"></div>
   <div class="project" ng-repeat="project in projects">
     <div class="project-image">
-      <img ng-src="{{project.image}}" />
+      <img ng-src="{{project.image}}" alt="project image"/>
     </div>
     <div class="project-title">
-      <a ng-href="#/project/{{project._id}}">
+      <a ng-href="#/project/{{project.id}}">
         <em>{{project.title}}</em>
       </a>
     </div>

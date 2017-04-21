@@ -137,23 +137,23 @@ module.exports = function(wagner) {
   api.get('/projects/genre/:query', wagner.invoke(function(Project) {
     return function(req, res) {
       Project.
-        find({ "genre" : req.params.query }).
+        find({ 'genre' : req.params.query }).
         exec(handleMany.bind(null, 'projects', res));
     };
   }));
 
-  api.get('/project/id/:id', wagner.invoke(function(Project) {
+  api.get('/project/:id', wagner.invoke(function(Project) {
     return function(req, res) {
       Project.
-        findOne({ "_id" : req.params.id }).
+        findOne({ 'id' : req.params.id }).
         exec(handleOne.bind(null, 'project', res));
     };
   }));
 
-  api.get('/user/id/:id', wagner.invoke(function(User) {
+  api.get('/user/:username', wagner.invoke(function(User) {
     return function(req, res) {
       User.
-        findOne({ "_id" : req.params.id }).
+        findOne({ 'profile.username' : req.params.username }).
         populate('data.portfolio.project').
         exec(handleOne.bind(null, 'user', res));
     };

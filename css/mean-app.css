@@ -170,7 +170,7 @@ a {
   padding: 5px;
   background-color: #fdfdfd;
   width: 320px;
-  margin: 5px;
+  margin-top: 15px;
   float: left;
   text-align: center;
   padding-top: 10px;
@@ -231,6 +231,7 @@ a {
 .project-details .details-right {
   float: left;
   width: 300px;
+  margin-left: 25px;
 }
 
 .project-details h1 {
