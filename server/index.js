@@ -11,7 +11,9 @@ app.use(require('morgan')('combined'));
 wagner.invoke(require('./auth'), { app: app });
 
 app.use('/api/v1', require('./api')(wagner));
-app.use(express.static('../', { maxAge: 4 * 60 * 60 * 1000 /* 2hrs */ }));
+app.use(express.static('../'));
+// for production:
+// app.use(express.static('../', { maxage: 24X60X60 /* 1 day */ }));
 
 app.listen(3000);
 console.log('Listening on port 3000!');

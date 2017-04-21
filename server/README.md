@@ -10,3 +10,8 @@ fashion of the MEAN course on EdX.
 6. Open "http://localhost:3000/auth/facebook" to authenticate at Facebook. Go to
    "http://localhost:3000/api/v1/me" to verify successful authentication; go to step 7.
 7. Verify api using curl, such as `curl http://localhost:3000/api/v1/project/id/1`.
+
+##References:
+1. https://evanhahn.com/express-dot-static-deep-dive/
+
+
