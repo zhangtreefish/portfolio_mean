@@ -150,10 +150,10 @@ module.exports = function(wagner) {
     };
   }));
 
-  api.get('/user/:username', wagner.invoke(function(User) {
+  api.get('/user/:id', wagner.invoke(function(User) {
     return function(req, res) {
       User.
-        findOne({ 'profile.username' : req.params.username }).
+        findOne({ '_id' : req.params.id }).
         populate('data.portfolio.project').
         exec(handleOne.bind(null, 'user', res));
     };

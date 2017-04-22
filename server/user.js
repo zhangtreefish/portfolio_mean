@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 
 module.exports = new mongoose.Schema({
+  _id: mongoose.Schema.Types.ObjectId,
   profile: {
     username: {
       type: String,

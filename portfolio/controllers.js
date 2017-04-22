@@ -144,23 +144,22 @@ exports.ProjectDetailsController = function($scope, $routeParams, $http, $log) {
 
 exports.UserDetailsController = function($scope, $http, $window, $routeParams, $log) {
   var tools = [];
-  var encoded = encodeURIComponent($routeParams.username);
+  var encoded = encodeURIComponent($routeParams.id);
 
   $scope.load = function() {
     $http.
       get('/api/v1/user/' + encoded).
       success(function(data) {
         $scope.user = data.user;
-        $log.log('$scope.user', $scope.user);
         $scope.projects = data.user.data.portfolio;
 
         $scope.projects.forEach(function(p, i) {
           $http.
-            get('/api/v1/project/' + p.id).
+            get('/api/v1/project/' + p._id).
             success(function(data) {
               tools.concat(data.project.tools);
-          })
-        };
+          });
+        });
 
         $log.log('tools', tools);
         $scope.tools = tools.filter(function(tool, pos) {
