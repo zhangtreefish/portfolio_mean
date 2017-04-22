@@ -86,7 +86,8 @@ a {
   color: #CC4A14;
   font-size: 30px;
   position: relative;
-  top: -3px;
+  /*top: -3px;*/
+  padding: 5px;
 }
 
 .nav-bar .checkout {
@@ -252,73 +253,17 @@ a {
 }
 
 /* me */
-
-.me-wrapper .me-project {
-  margin: 5px;
-  padding: 5px;
-  border-bottom: 1px solid #bdbdbd;
-  max-height: 100px;
-}
-
-.me-wrapper .me-project .image-left {
-  float: left;
-  margin-right: 15px;
-}
-
-.me-wrapper .me-project .image-left img {
-  height: 80px;
-  width: 80px;
-}
-
-.me-wrapper .me-project .project-details {
-  float: left;
-}
-
-.me-wrapper .me-project .project-details .title {
-  overflow: hidden;
-  font-size: 1.5em;
-}
-
-.me-wrapper .me-project .project-details img {
-  overflow: hidden;
-  width: 80px;
-}
-
-.me-wrapper .me-project .project-details .description {
-  font-size: 0.75em;
-  color: #666666;
-  margin-left: 0.5em;
-  margin-top: 0.5em;
-  margin-bottom: 15px;
+.me-wrapper {
+  background-color: #02b3e4;
 }
 
 .me-wrapper .update-portfolio-button {
-  width: 100px;
+  width: 40px;
   font-size: 18px;
   color: white;
   background-color: #CC4A14;
-  padding: 10px;
-  margin-top: 20px;
-  border-radius: 5px;
-  display: inline-block;
-  text-align: center;
-  cursor: pointer;
-}
-
-.me-wrapper .me {
-  margin-top: 25px;
-  border: 1px solid #bdbdbd;
-  border-radius: 5px;
-  padding: 10px;
-}
-
-.me-wrapper .me-button {
-  width: 100px;
-  font-size: 18px;
-  color: white;
-  background-color: #CC4A14;
-  padding: 10px;
-  margin-top: 20px;
+  padding: 5px;
+  margin-top: 0px;
   border-radius: 5px;
   display: inline-block;
   text-align: center;

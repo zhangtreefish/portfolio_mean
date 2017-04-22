@@ -182,6 +182,7 @@ exports.UserDetailsController = function($scope, $http, $window, $routeParams, $
 
 exports.MeController = function($scope, $user, $http, $projects) {
   $scope.user = $user;
+  var myProjects = [];
 //TODO: refactor into factory
   $http.
     get('/api/v1/projects').
@@ -189,6 +190,10 @@ exports.MeController = function($scope, $user, $http, $projects) {
       $scope.projects = data.projects;
     });
 
+  $scope.add = function(item) {
+    //TODO: push item to [projects], save user
+
+  }
   $scope.updatePortfolio = function() {
     $http.
       put('/api/v1/me/portfolio', $user.user).

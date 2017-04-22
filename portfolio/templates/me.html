@@ -1,24 +1,17 @@
-<div class="me-wrapper container">
-  <div ng-repeat="item in projects" class="row me-project">
-    <div class="span3 project-details">
-      <div class="title">
-        {{item.title}}
-      </div>
-      <img class="img-responsive" ng-src="{{item.image}}" alt="project image" />
-    </div>
-    <div style="clear: both"></div>
+<div class="me-wrapper">
+  <div>
+    <ul ng-repeat="item in projects" ng-click="add(item)">
+      <li>
+        <a ng-href="#/project/{{item._id}}">
+          <em>{{item.title}}</em>
+        </a>
+      </li>
+    </ul>
   </div>
-  <div class="update-portfolio-button" ng-click="updatePortfolio()">
-    Update My Portfolio
+  <div>
+    <button class="btn btn-success btn-sm" type="submit"
+     ng-click="updatePortfolio()">
+      Add To Portfolio
+    </button>
   </div>
 </div>
- <!--  <div class="image-left">
-    <img ng-src="{{item.image}}">
-  </div> -->
-        <!-- <div class="price">
-      {{item.description}}
-    </div>
-    <div class="quantity">
-      Description:
-      <input type="text" ng-model="item.description" />
-    </div> -->
