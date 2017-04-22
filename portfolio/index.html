@@ -18,9 +18,11 @@
 
   </head>
   <body>
-    <div id="wrap" class="container-fluid">
-      <nav-bar></nav-bar>
-      <div class="content-wrapper" ng-view></div>
+    <div id="wrap">
+      <div id="main" class="container clear-top">
+        <nav-bar></nav-bar>
+        <div class="content-wrapper" ng-view></div>
+      </div>
       <custom-footer></custom-footer>
 <!--       <div id="push"></div> -->
     </div>

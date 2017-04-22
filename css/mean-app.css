@@ -14,11 +14,18 @@ body {
     /* Negative indent footer by its height */
     margin: 0 auto -30px;
 }
-
+#main {
+  overflow: auto;
+  padding-bottom: 170px; /* this needs to be bigger than footer height*/
+}
 /* Set the fixed height of the footer here */
 #push,
 #footer {
-    height: 50px;
+  position: relative;
+  margin-top: -150px; /* negative value of footer height */
+  height: 150px;
+  clear:both;
+  padding-top:20px;
 }
 
 #footer {
@@ -33,7 +40,6 @@ body {
   margin: 0px;
   padding: 0px;
   font-family: 'Helvetica', sans-serif;
-  padding-bottom: 170px;
 }
 
 .content-wrapper {
@@ -129,10 +135,10 @@ a {
   color: black;
 }
 .crumbs .crumb a{
-  color: black !important;
+  color: #02b3e4 !important;
 }
 .crumbs .divider {
-  /*color: #BDBDBD;*/
+  color: #02b3e4;
   display: inline-block;
   margin-right: 5px;
 }
@@ -306,7 +312,6 @@ a {
 
 .about a {
   color: black;
-  font-size: 2.0em;
 }
 
 @media screen  and (max-width: 350px) {
