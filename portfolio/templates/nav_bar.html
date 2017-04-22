@@ -1,18 +1,15 @@
 <div class="nav-bar container">
   <div class="nav-bar-contents row">
     <div class="logo">
-      <i class="fa fa-briefcase fa-2x" aria-hidden="true"></i>
+      <a ng-href="#/about">
+          <i class="fa fa-home fa-2x" aria-hidden="true"></i>
+        </a>
     </div>
     <div class="title">
       Portfolio Builder
     </div>
     <div class="user-info">
-      <div class="checkout" ng-show="user.user">
-        <a ng-href="#/portfolio">
-          <i class="fa fa-tasks"></i>
-        </a>
-      </div>
-      <div class="user" ng-show="user.user">
+      <div class="me" ng-show="user.user">
         <img ng-src="{{user.user.profile.picture}}" alt="project image"/>
       </div>
       <div class="login" ng-show="!user.user">

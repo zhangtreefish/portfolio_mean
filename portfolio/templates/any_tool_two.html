@@ -1,10 +1,10 @@
 <div class="search-bar-wrapper">
   <div style="clear: both"></div>
   <form class="pickTool">
-    <label for="pickTool"> Pick a Tool </label>
+    <label for="pickATool"> Pick a Tool </label>
     <select
       name="pickTool"
-      id="pickTool"
+      id="pickATool"
       ng-options="tool as tool._id for tool in tools"
       ng-model="selectedTool"
       ng-change="load()"
