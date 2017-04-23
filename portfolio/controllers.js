@@ -36,7 +36,8 @@ exports.UsersController = function ($scope, $users, $http, $log) {
 
 exports.CustomFooterController = function($window, $scope) {
   $scope.liurl = 'https://www.linkedin.com/in/zhangshuyu';
-  $scope.goLinkedIn = function(url) {
+  $scope.ghurl = 'https://github.com/zhangtreefish';
+  $scope.go = function(url) {
     $window.open(url);
   };
 };
