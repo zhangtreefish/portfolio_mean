@@ -1,7 +1,7 @@
 var mongodb = require('mongodb');
 var fs = require('fs');
 
-var dburi = process.env.MONGODB_URI;
+var dburi = require('./dburi');
 
 module.exports = function(callback) {
   mongodb.MongoClient.connect(dburi, callback);

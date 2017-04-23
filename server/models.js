@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var _ = require('underscore');
 
-var dburi = process.env.MONGODB_URI;
+var dburi = require('./dburi');
 
 module.exports = function(wagner) {
   var options = { promiseLibrary: require('bluebird') };
