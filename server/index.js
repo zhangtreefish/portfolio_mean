@@ -19,5 +19,5 @@ app.use(express.static(path.join(__dirname,'../')));
 
 var server = app.listen(process.env.PORT || 8080, function () {
   var port = server.address().port;
-  console.log("App now running on port", port);
+  console.log("App now running at the port", port);
 });
