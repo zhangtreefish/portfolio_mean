@@ -175,12 +175,12 @@ function handleMany(property, res, error, result) {
   res.json(json);
 }
 function handleManyPromise(property, res, result) {
-  // if (error) {
-  //   console.log(error);
-  //   return res.
-  //     status(status.INTERNAL_SERVER_ERROR).
-  //     json({ error: error.toString() });
-  // }
+  if (error) {
+    console.log(error);
+    return res.
+      status(status.INTERNAL_SERVER_ERROR).
+      json({ error: error.toString() });
+  }
 
   var json = {};
   json[property] = result;
