@@ -3,7 +3,6 @@ let wagner = require('wagner-core');
 var path = require('path');
 
 require('./models')(wagner);
-require('./dependencies')(wagner);
 
 let app = express();
 app.use(require('morgan')('combined'));

@@ -4,51 +4,41 @@ var status = require('http-status');
 var superagent = require('superagent');
 var wagner = require('wagner-core');
 
-var URL_ROOT = 'http://localhost:3003';
-var PROJECT_ID = '000000000000000000000001';
+var URL_ROOT = 'http://localhost:3000';
 
-
-describe('API', function() {
-  let server;
-
-  let Project;
-  let User;
+describe('Text Search API', function() {
+  var server;
+  var Project;
+  var User;
 
   before(function() {
-    let app = express();
+    var app = express();
 
     // Bootstrap server
     require('./models')(wagner);
-    require('./dependencies')(wagner);
 
-    let depes = wagner.invoke(function(Project, User) {
+    // Make models available in tests
+    var dependencies = wagner.invoke(function(Project, User) {
       return {
-        Proj: Project,
-        Usr: User,
+        Project: Project,
+        User: User
       };
     });
 
-    // User = mods.User;
-
-    User =  depes.Usr;
-
-    Project = depes.Proj;
-
-
-    // User = models.User;
+    Project = dependencies.Project;
+    User = dependencies.User;
 
     app.use(function(req, res, next) {
       User.findOne({}, function(error, user) {
         assert.ifError(error);
         req.user = user;
-        console.log(user); //?
         next();
       });
     });
 
     app.use(require('./api')(wagner));
 
-    server = app.listen(3003);
+    server = app.listen(3000);
   });
 
   after(function() {
@@ -70,14 +60,16 @@ describe('API', function() {
   beforeEach(function(done) {
     var projects = [
       {
-          "_id": PROJECT_ID,
           "id": "101",
           "genre": "full stack",
           "title": "Piano Studio",
           "year_start": 2016,
           "year_end": 2018,
           "description": "Piano teacher and students manage the lessons, practice, payment, and recital",
-          "tools": ["angular2", "typescript", "ES6", "MEAN", "javascript"]
+          "tools": ["angular2", "typescript", "ES6", "MEAN", "javascript"],
+          "image": "",
+          "url": "",
+          "code": ""
       },
       {
           "id": "102",
@@ -86,18 +78,20 @@ describe('API', function() {
           "year_start": 2015,
           "year_end": 2019,
           "description": "Where learners of opposite language pairs talk to each other",
-          "tools": ["amazon-web-services", "MERN", "react-native", "javascript"]
-      }
+          "tools": ["amazon-web-services", "MERN", "react-native", "javascript"],
+          "image": "",
+          "url": "",
+          "code": ""
+      },
     ];
 
     var users = [{
       profile: {
-        username: 'treefish',
-        picture: 'http://i.imgur.com/5r0DB0H.jpg'
+        username: 'vkarpov15',
+        picture: 'http://pbs.twimg.com/profile_images/550304223036854272/Wwmwuh2t.png'
       },
       data: {
         oauth: 'invalid',
-        portfolio:[]
       }
     }];
 
@@ -108,52 +102,6 @@ describe('API', function() {
         done();
       });
     });
-  });
-
-  it('can load users portfolio', function(done) {
-    var url = URL_ROOT + '/me';
-
-    User.findOne({}, function(error, user) {
-      assert.ifError(error);
-      user.data.portfolio = [{ project: PROJECT_ID }];
-      user.save(function(error) {
-        assert.ifError(error);
-
-        superagent.get(url, function(error, res) {
-          assert.ifError(error);
-
-          assert.equal(res.status, 200);
-          var result;
-          assert.doesNotThrow(function() {
-            result = JSON.parse(res.text).user;
-          });
-          assert.equal(result.data.portfolio.length, 1);
-          assert.equal(result.data.portfolio[0].project.title, 'Piano Studio');
-          done();
-        });
-      });
-    });
-  });
-
-  it('can save users portfolio', function(done) {
-    var url = URL_ROOT + '/me/portfolio';
-    superagent.
-      put(url).
-      send({
-        data: {
-          portfolio: [{ project: PROJECT_ID }]
-        }
-      }).
-      end(function(error, res) {
-        assert.ifError(error);
-        assert.equal(res.status, status.OK);
-        User.findOne({}, function(error, user) {
-          assert.ifError(error);
-          assert.equal(user.data.portfolio.length, 1);
-          assert.equal(user.data.portfolio[0].project, PROJECT_ID);
-          done();
-        });
-      });
   });
 
   it('can search by text', function(done) {
@@ -168,7 +116,7 @@ describe('API', function() {
         results = JSON.parse(res.text).projects;
       });
 
-      // Expect that we got the Piano Studio back
+      // Expect that we got the Zenbook Prime back
       assert.equal(results.length, 2);
       assert.equal(results[1].id, '102');
       assert.equal(results[0].title, 'Piano Studio');

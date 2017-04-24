@@ -46,7 +46,7 @@
 		"title": "Blog Bottle Mongo",
 		"year_start": 2017,
 		"year_end": 2017,
-		"description": "Built a blog where the user adds new posts and comments on posts",
+		"description": "Edited a blog where the user adds new posts and comments on posts",
 		"image": "http://i.imgur.com/rxsq0Xn.jpg",
 		"code": "https://github.com/zhangtreefish/blog_bottle_mongo.git",
 		"tools": ["mongodb", "python", "pymongo", "bottle"]
@@ -55,7 +55,7 @@
 		"genre": "full stack",
 		"title": "Java Blog",
 		"year_start": 2017,
-		"description": "Built a blog with Java, MongoDB and Spark microframework",
+		"description": "Modifying a blog in Java, MongoDB and Spark microframework",
 		"image": "",
 		"code": "https://github.com/zhangtreefish/java_blog.git",
 		"tools": ["mongodb", "spark", "freemarker", "netbeans", "maven", "java", "morphia"]
@@ -97,7 +97,7 @@
 		"genre": "full stack",
 		"title": "Portfolio Builder",
 		"year_start": 2017,
-		"description": "Built a MEAN-stack app featuring users and projects where projects can be viewed by their tool sets",
+		"description": "Building a MEAN-stack app featuring users and projects where portfolios can be created by users",
 		"image": "http://i.imgur.com/vT4eJpU.jpg",
 		"code": "https://github.com/zhangtreefish/portfolio_mean.git",
 		"tools": ["mongodb", "node.js", "express", "angularjs", "mongodb-atlas", "javascript", "mongoose", "mocha", "gulp", "karma"]
@@ -177,4 +177,15 @@
 		"url": "http://zhangtreefish.github.io/Project-4-for-Front-End-Web-Developer-Nanodegree/",
 		"code": "https://github.com/zhangtreefish/Project-4-for-Front-End-Web-Developer-Nanodegree",
 		"tools": ["google-chrome-devtools", "javascript"]
+	}, {
+		"id": "18",
+		"genre": "full stack",
+		"title": "Mongo Mart",
+		"year_start": 2016,
+		"year_end": 2017,
+		"description": "Edited a shopping site where the users search and order products and checkout",
+		"image": "http://i.imgur.com/e5h76u8.jpg",
+		"url": "https://mongomartdetreefish.herokuapp.com/",
+		"code": "https://github.com/zhangtreefish/mongomart.git",
+		"tools": ["mongodb", "javascript", "express", "node.js", "nunjucks"]
 	}]

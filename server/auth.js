@@ -1,4 +1,4 @@
-function setupAuth(User, Config, app) {
+function setupAuth(User, app) {
   var passport = require('passport');
   var FacebookStrategy = require('passport-facebook').Strategy;
 
@@ -17,8 +17,8 @@ function setupAuth(User, Config, app) {
   // Facebook-specific
   passport.use(new FacebookStrategy(
     {
-      clientID: Config.facebookClientId,
-      clientSecret: Config.facebookClientSecret,
+      clientID: process.env.facebookClientId,
+      clientSecret: process.env.facebookClientSecret,
       callbackURL: 'http://localhost:3000/auth/facebook/callback',
       profileFields: ['id', 'email', 'name']
     },
