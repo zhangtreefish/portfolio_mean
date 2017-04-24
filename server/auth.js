@@ -19,7 +19,7 @@ function setupAuth(User, app) {
     {
       clientID: process.env.facebookClientId,
       clientSecret: process.env.facebookClientSecret,
-      callbackURL: 'http://localhost:3000/auth/facebook/callback',
+      callbackURL: CALLBACK_URL+'auth/facebook/callback',
       profileFields: ['id', 'email', 'name']
     },
     function(accessToken, refreshToken, profile, done) {
@@ -59,13 +59,13 @@ function setupAuth(User, app) {
       passport.authenticate('facebook',
         {
           scope: ['email'],
-          callbackURL: 'http://localhost:3000/auth/facebook/callback?redirect=' + redirect
+          callbackURL: CALLBACK_URL+'auth/facebook/callback?redirect=' + redirect
         })(req, res, next);
     });
 
   app.get('/auth/facebook/callback',
     function(req, res, next) {
-      var url = 'http://localhost:3000/auth/facebook/callback?redirect=' +
+      var url = CALLBACK_URL+'auth/facebook/callback?redirect=' +
         encodeURIComponent(req.query.redirect);
       passport.authenticate('facebook', { callbackURL: url })(req, res, next);
     },
