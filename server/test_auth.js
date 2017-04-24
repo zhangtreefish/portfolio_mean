@@ -9,17 +9,11 @@ describe('auth fb', function() {
   //first import the needed dependencies
   require('./dependencies')(wagner);
 
-  //then invoke one of the dependencies: Config
-  var Config = wagner.invoke(function(Config){
-      return Config;
-    })
-
-
   it( 'can access Facebook using facebookClientId and ' +
       'facebookClientSecret', function(done) {
     var url = 'https://graph.facebook.com/' +
-      Config.facebookClientId + '?access_token=' +
-      Config.facebookClientId + '|' + Config.facebookClientSecret;
+      process.env.facebookClientId + '?access_token=' +
+      process.env.facebookClientId + '|' + process.env.facebookClientSecret;
 
     superagent.get(url, function(error, res) {
       if (error) {
@@ -30,7 +24,7 @@ describe('auth fb', function() {
         result = JSON.parse(res.text);
       });
 
-      assert.equal(result.id, Config.facebookClientId);
+      assert.equal(result.id, process.env.facebookClientId);
       done();
     });
   });

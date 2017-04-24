@@ -13,7 +13,6 @@ describe('API', function() {
 
   let Project;
   let User;
-  let Config;
 
   before(function() {
     let app = express();
@@ -22,17 +21,15 @@ describe('API', function() {
     require('./models')(wagner);
     require('./dependencies')(wagner);
 
-    let depes = wagner.invoke(function(Project, User, Config) {
+    let depes = wagner.invoke(function(Project, User) {
       return {
         Proj: Project,
         Usr: User,
-        Conf: Config
       };
     });
 
-    // Config = depends.Config;
     // User = mods.User;
-    Config = depes.Conf;
+
     User =  depes.Usr;
 
     Project = depes.Proj;
