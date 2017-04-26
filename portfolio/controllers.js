@@ -87,11 +87,13 @@ exports.ProjectsByToolController = function($scope, $routeParams, $http, $log) {
 exports.ToolProjectsTwoController = function($scope, $routeParams, $http, $shareTool, $log) {
   $scope.selectedTool = $shareTool.selectedTool;
   var encode = $shareTool.selectedTool._id;
+  $log.log('trying hard getting $scope.projects with $scope.selectedTool', $scope.selectedTool);
   $scope.load = function() {
     $http.
       get('/api/v1/projects/tool/' + $scope.selectedTool._id).
       success(function(data) {
         $scope.projects = data.projects;
+        $log.log('$scope.projects', $scope.projects);
       });
   };
 
