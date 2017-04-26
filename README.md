@@ -25,8 +25,8 @@ APIs using curl, such as `curl http://localhost:3000/api/v1/project/<_id>`.
 Facebook, then go to "http://localhost:3000/api/v1/me" to verify successful
 authentication;
 
-7. To view the front-end, after starting the server, go to
-http://localhost:3000/portfolio/#/ and other views defined in portfolio/index.js.
+7. To view the front-end, after starting the server, run 'gulp' at /portfolio directory,
+go to http://localhost:3000/portfolio/#/ and other views defined in portfolio/index.js.
 
 ##References:
 1. `__dirname`: where executing script resides; `.`: where node command is issued. http://stackoverflow.com/questions/8131344/what-is-the-difference-between-dirname-and-in-node-js#
