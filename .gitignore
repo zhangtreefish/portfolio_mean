@@ -1,2 +1,5 @@
 node_modules/
 *.env
+'~$rtfolio_Mean-journal.docx'
+ portfolio_Mean-journal.docx
+server/opt/
