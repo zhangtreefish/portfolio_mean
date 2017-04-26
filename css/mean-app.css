@@ -61,6 +61,7 @@ a {
   cursor: pointer;
   color: white;
   background-color: #CC4A14;
+  font-size: 0.5em;
 }
 
 .portfolio-button i {
@@ -263,7 +264,13 @@ a {
 /* me */
 .me-wrapper {
   background-color: #02b3e4;
+  padding-bottom: 5px;
 }
+
+.me-wrapper ul {
+  height: 15px;
+}
+
 
 .me-wrapper .update-portfolio-button {
   width: 40px;
