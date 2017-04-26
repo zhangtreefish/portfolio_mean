@@ -43,7 +43,7 @@ body {
 }
 
 .content-wrapper {
-  width: 100%;
+  width: 290px;
   margin: auto;
   position: relative;
   background-color: #CC4A14;
@@ -288,8 +288,9 @@ a {
 /* search */
 .search-bar-wrapper {
   position: relative;
-  width: 100%;
+  padding: 10px;
   text-align: center;
+  min-width: 275px;
 }
 
 .pickTool {
@@ -298,7 +299,6 @@ a {
   background-color: #02b3e4;
   width: 320px;
   max-width: 100%;
-  margin: 5px;
   float: left;
   text-align: center;
   padding-top: 5px;
@@ -309,10 +309,11 @@ a {
   font-size: 0.7em;
 }
 
-#pickATool {
+#pickTool {
   border-radius: 5px;
   border: 3px inset #ccc;
-  width: 100%;
+  width: 250px;
+  max-width: 90%;
   height: 1.5em;
   font: 0.5em;
 }
