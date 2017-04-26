@@ -1,7 +1,7 @@
 var assert = require('assert');
 var connect = require('./connect');
 var dbInterface = require('./interface');
-var projects = require('./projects2');
+var projects = require('./projects_test');
 
 /**
  *  This test suite is meant to be run through gulp (use the `npm run watch`)
