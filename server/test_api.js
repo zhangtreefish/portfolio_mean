@@ -6,6 +6,8 @@ var wagner = require('wagner-core');
 
 var URL_ROOT = 'http://localhost:3003';
 var PROJECT_ID = '000000000000000000000001';
+var PROJECT_ID2 = '000000000000000000000002';
+var PROJECT_ID3 = '000000000000000000000003';
 
 
 describe('API', function() {
@@ -83,6 +85,7 @@ describe('API', function() {
           "tools": ["angular2", "typescript", "ES6", "MEAN", "javascript"]
       },
       {
+          "_id": PROJECT_ID2,
           "id": "102",
           "genre": "full stack",
           "title": "Speak to One Another",
@@ -94,6 +97,7 @@ describe('API', function() {
     ];
 
     var users = [{
+      _id: PROJECT_ID3,
       profile: {
         username: 'treefish',
         picture: 'http://i.imgur.com/5r0DB0H.jpg'
