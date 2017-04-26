@@ -99,7 +99,7 @@
 		"year_start": 2017,
 		"description": "Building a MEAN-stack app featuring users and projects where portfolios can be created by users",
 		"image": "http://i.imgur.com/vT4eJpU.jpg",
-		"url": "https://portfolio-mean.herokuapp.com",
+		"url": "https://portfolio-mean.herokuapp.com/portfolio",
 		"code": "https://github.com/zhangtreefish/portfolio_mean.git",
 		"tools": ["mongodb", "node.js", "express", "angularjs", "mongodb-atlas", "javascript", "mongoose", "mocha", "gulp", "karma"]
 	}, {
