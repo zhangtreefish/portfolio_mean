@@ -1,7 +1,8 @@
 function setupAuth(User, app) {
   var passport = require('passport');
   var FacebookStrategy = require('passport-facebook').Strategy;
-  var callback_base = process.env.LOCAL_CALLBACK_URL||process.env.CALLBACK_URL;
+  // var callback_base = process.env.LOCAL_CALLBACK_URL;
+  var callback_base = process.env.CALLBACK_URL;
 
   //Passport serializes and deserializes user instances to and from the login session.
   //in this case only using _id to keep the cookie small.
