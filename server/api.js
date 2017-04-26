@@ -179,7 +179,7 @@ function handleMany(property, res, error, result) {
   res.json(json);
 }
 
-function handleManyPromise(property, res, error, result) {
+function handleManyPromise(property, res, result, error) {
   if (error) {
     console.log(error);
     return res.
