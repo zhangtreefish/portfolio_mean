@@ -1,6 +1,7 @@
 function setupAuth(User, app) {
   var passport = require('passport');
   var FacebookStrategy = require('passport-facebook').Strategy;
+  var callback_base = process.env.LOCAL_CALLBACK_URL||process.env.CALLBACK_URL;
 
   //Passport serializes and deserializes user instances to and from the login session.
   //in this case only using _id to keep the cookie small.
@@ -19,7 +20,7 @@ function setupAuth(User, app) {
     {
       clientID: process.env.facebookClientId,
       clientSecret: process.env.facebookClientSecret,
-      callbackURL: process.env.CALLBACK_URL+'auth/facebook/callback',
+      callbackURL: callback_base + 'auth/facebook/callback',
       profileFields: ['id', 'email', 'name']
     },
     function(accessToken, refreshToken, profile, done) {
@@ -59,13 +60,13 @@ function setupAuth(User, app) {
       passport.authenticate('facebook',
         {
           scope: ['email'],
-          callbackURL: process.env.CALLBACK_URL+'auth/facebook/callback?redirect=' + redirect
+          callbackURL: callback_base + 'auth/facebook/callback?redirect=' + redirect
         })(req, res, next);
     });
 
   app.get('/auth/facebook/callback',
     function(req, res, next) {
-      var url = process.env.CALLBACK_URL+'auth/facebook/callback?redirect=' +
+      var url = callback_base + 'auth/facebook/callback?redirect=' +
         encodeURIComponent(req.query.redirect);
       passport.authenticate('facebook', { callbackURL: url })(req, res, next);
     },
