@@ -43,7 +43,8 @@ body {
 }
 
 .content-wrapper {
-  width: 290px;
+  /*width: 100%;*/
+  min-width: 290px;
   margin: auto;
   position: relative;
   background-color: #CC4A14;
@@ -224,6 +225,7 @@ a {
   border: 1px solid #BDBDBD;
   border-radius: 5px;
   padding: 5px;
+  min-width: 290px;
 }
 
 .project-details .image-left {
