@@ -333,4 +333,7 @@ body {background-color: green;}
 
 @media screen and (min-width: 800px) {
         body {background-color: #02b3e4;}
+        .project {
+          width: 500px;
+          margin: 10px; }
       }
