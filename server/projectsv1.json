@@ -26,9 +26,9 @@
 		"title": "A Tournament Database",
 		"year_start": 2015,
 		"year_end": 2015,
-		"description": "Developed a PostgreSQL database to track the players and matches of a tournament",
-		"code": "https://github.com/psycopg/psycopg2.git",
-		"tools": ["psql", "vagrant", "python", "postgresql", "psycopg2"]
+		"description": "Developed a PostgreSQL database in a Vagrant virtual machine to track the players and matches of a tournament",
+		"code": "https://github.com/zhangtreefish/Project-2-for-Full-Stack-Web-Developer-Nanodegree",
+		"tools": ["psql", "vagrant", "python3", "python", "postgresql", "psycopg2"]
 	}, {
 		"id": "11",
 		"genre": "front-end",
@@ -122,7 +122,7 @@
 		"image": "http://i.imgur.com/dd4d0fr.png",
 		"url": "http://ec2-52-38-199-253.us-west-2.compute.amazonaws.com/",
 		"code": "https://github.com/zhangtreefish/Project-3-for-Full-Stack-Nanodegree-at-Udacity",
-		"tools": ["amazon-web-services", "apache2", "postgresql", "ubuntu", "linux", "flask", "jinja2", "python", "json", "sqlalchemy", "oauth2"]
+		"tools": ["amazon-web-services", "apache2", "postgresql", "ubuntu", "linux", "flask", "jinja2", "python", "json", "sqlalchemy", "oauth2", "vagrant"]
 	}, {
 		"id": "4",
 		"genre": "back-end",
@@ -154,7 +154,7 @@
 		"image": "http://i.imgur.com/N5oMeud.jpg",
 		"url": "https://udacity-alumni-client.herokuapp.com",
 		"code": "https://github.com/udacityalumni/alumni-client",
-		"tools": ["react", "redux", "scalable-react-boilerplate", "grommet", "node.js", "apollo", "graphql", "javascript"]
+		"tools": ["react", "redux", "scalable-react-boilerplate", "grommet", "node.js", "apollo", "graphql", "javascript", "enzyme", "jest", "ecmascript-6"]
 	}, {
 		"id": "7",
 		"genre": "front-end",
