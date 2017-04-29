@@ -2,6 +2,7 @@ var baseUrl = 'http://127.0.0.1:3003/';
 if (process.env.SERVER === 'prod') {
     baseUrl = 'https://portfolio-mean.herokuapp.com/';
 }
+var timeout = process.env.DEBUG === true? 99999999: 10000;
 
 exports.config = {
 
@@ -128,7 +129,8 @@ exports.config = {
     // Options to be passed to Mocha.
     // See the full list at http://mochajs.org/
     mochaOpts: {
-        ui: 'bdd'
+        ui: 'bdd',
+        timeout: timeout
     },
     //
     // =====
