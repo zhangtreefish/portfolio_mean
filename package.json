@@ -48,7 +48,6 @@
     "testauth": "mocha server/test_auth.js",
     "test": "wdio wdio.mocha.conf.js",
     "watch": "gulp watch",
-    "start": "node server/index.js",
-    "selser": "selenium-standalone"
+    "start": "node server/index.js"
   }
 }
