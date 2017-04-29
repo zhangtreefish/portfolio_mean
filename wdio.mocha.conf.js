@@ -2,7 +2,6 @@ var baseUrl = 'http://127.0.0.1:3003/';
 if (process.env.SERVER === 'prod') {
     baseUrl = 'https://portfolio-mean.herokuapp.com/';
 }
-console.log('baseUrl', baseUrl);
 
 exports.config = {
 
