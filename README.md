@@ -29,22 +29,14 @@ To view the deployed adpp, go to https://portfolio-mean.herokuapp.com/portfolio
 
 ## To Run Functional Testing
 
-All at a separate terminal, at the project root directory:
+All at the project root directory:
 
-1. Start a standalone-selenium server by:
-```sh
-npm run selser start
-```
-2. Start the application server if testing the local application:
+1. If testing the local application, on two separate terminals:
 ```sh
 heroku local
+npm test
 ```
-3. Start the test:
-```sh
-./node_modules/.bin/wdio wdio.mocha.conf.js
-```
-or
+2. If testing a deployed application, update baseUrl in wdio.mocha.conf.js and then:
 ```sh
 SERVER=prod npm test
-npm test
 ```
