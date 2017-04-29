@@ -1,5 +1,3 @@
-var assert = require('assert');
-
 describe('Portfolio Page app', function() {
 	before(function(){
         browser.url('/portfolio/');
@@ -12,12 +10,11 @@ describe('Portfolio Page app', function() {
 
     it('should have a title', function() {
         var title = browser.getTitle();
-        assert.equal(title, 'Portfolio Site');
+        expect(title).to.equal('Portfolio Site');
     });
 
     it('should have a url', function() {
         var url = browser.getUrl();
-        var containsUrl = url.includes('//portfolio/#/');
-        assert.ok(containsUrl);
+        expect(url).to.include('//portfolio/#/', 'url mismatch');
     });
 });

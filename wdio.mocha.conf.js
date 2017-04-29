@@ -160,9 +160,10 @@ exports.config = {
      * @param {Array.<Object>} capabilities list of capabilities details
      * @param {Array.<String>} specs List of spec file paths that are to be run
      */
-    // before: function (capabilities, specs) {
-    // },
-    //
+    before: function (capabilities, specs) {
+        expect = require('chai').expect;
+    },
+
     /**
      * Hook that gets executed before the suite starts
      * @param {Object} suite suite details
