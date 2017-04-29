@@ -5,7 +5,7 @@ I copied files from Chap4.7-examples of the MEAN course at EdX, and modified it 
 
 Git clone the application repository;
 
-Checkout to a dev git branch;
+Git checkout from master branch to a dev branch;
 
 At `portfolio` directory: Set node version to 0.12 and npm to match;
 ```npm install```
@@ -20,5 +20,9 @@ Go to `http://localhost:3000/auth/facebook` to authenticate, then:
 go to `http://localhost:3000/portfolio/#/project/<_id>` to view a detailed project;
 Make changes to .js code and watch the pages change.
 
+##How to Unit Test
+```sh
+./node_modules/karma/bin/karma start ./karma.local.conf.js
+```
 ##References:
 https://github.com/stefanKuijers/live-templates/blob/master/live-templates.js
