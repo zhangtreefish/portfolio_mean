@@ -26,3 +26,20 @@ http://localhost:3003/portfolio/#/ and other views defined in portfolio/index.js
 git push heroku deploy_heroku:master
 ```
 To view the deployed adpp, go to https://portfolio-mean.herokuapp.com/portfolio
+
+## To Run Functional Testing
+
+All at a separate terminal, at the project root directory:
+
+1. Start a standalone-selenium server by:
+```sh
+npm run selser start
+```
+2. Start the application server if testing the local application:
+```sh
+heroku local
+```
+3. Start the test:
+```sh
+./node_modules/.bin/wdio wdio.mocha.conf.js
+```
