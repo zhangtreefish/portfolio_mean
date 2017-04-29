@@ -43,3 +43,8 @@ heroku local
 ```sh
 ./node_modules/.bin/wdio wdio.mocha.conf.js
 ```
+or
+```sh
+SERVER=prod npm test
+npm test
+```
