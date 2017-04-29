@@ -3,3 +3,6 @@ node_modules/
 '~$rtfolio_Mean-journal.docx'
  portfolio_Mean-journal.docx
 server/opt/
+test/
+errorShots/
+wdio.mocha.conf.js

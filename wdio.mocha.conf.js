@@ -1,3 +1,9 @@
+var baseUrl = 'http://127.0.0.1:3003/';
+if (process.env.SERVER === 'prod') {
+    baseUrl = 'https://portfolio-mean.herokuapp.com/';
+}
+console.log('baseUrl', baseUrl);
+
 exports.config = {
 
     //
@@ -72,7 +78,7 @@ exports.config = {
     //
     // Set a base URL in order to shorten url command calls. If your url parameter starts
     // with "/", then the base url gets prepended.
-    baseUrl: 'http://127.0.0.1:3003/portfolio/',
+    baseUrl: baseUrl,
     //
     // Default timeout for all waitFor* commands.
     waitforTimeout: 10000,
