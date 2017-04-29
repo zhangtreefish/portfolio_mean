@@ -1,5 +1,1 @@
-<<<<<<< HEAD
-7.8.0
-=======
 6.10.2
->>>>>>> 4abc971... Fix: change to Node 6.10.2 to avoid error about 'fiber' rought on by Node 7.x
