@@ -6,8 +6,12 @@ describe('Portfolio Page app', function() {
 	});
     it('should have a title', function() {
         browser.url('/');
-        // browser.waitForValue('title', 3000);
         var title = browser.getTitle();
         assert.equal(title, 'Portfolio Site');
+    });
+    it('should have a url', function() {
+        browser.url('/');
+        var url = browser.getUrl();
+        assert.equal(url, 'http://127.0.0.1:3003/portfolio//#/');
     });
 });
