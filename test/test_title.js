@@ -21,7 +21,7 @@ describe('Portfolio Page app', function() {
 
 describe('#pickTool', function() {
 	it('should have a height', function() {
-		var height = browser.getCssProperty('#pickTool', 'height');
+		var height = $('#pickTool').getCssProperty('height');
 		expect(height.parsed.value).to.be.at.least(0, "#pickTool height not >= 0!");
 	});
 	//TODO:
@@ -42,11 +42,11 @@ describe('#pickTool', function() {
 })
 describe('About anchor', function() {
 	it('should exist', function() {
-		var isExisting = browser.isExisting('#about');
-		expect(isExisting).to.equal(true, 'About anchor missing!');
+		var isExisting = $('#about').isExisting();
+		expect(isExisting, 'About anchor present.').to.be.true;
 	});
 	it('should go to About url on click', function() {
-		browser.click('#about');
+		$('#about').click();
 		var about_url = browser.getUrl();
 		expect(about_url).to.include('/portfolio/#/about', 'Link to About broken!');
 	})
