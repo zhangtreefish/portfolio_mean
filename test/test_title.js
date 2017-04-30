@@ -15,7 +15,7 @@ describe('Portfolio Page app', function() {
 
     it('should have a url', function() {
         var url = browser.getUrl();
-        expect(url).to.include('//portfolio/#/', 'url mismatch');
+        expect(url).to.include('/portfolio/#/', 'url mismatch');
     });
 });
 
@@ -32,4 +32,11 @@ describe('#pickTool', function() {
  //        console.log(tools);
  //        //expect(url).to.include('//portfolio/#/', 'url mismatch');
 	// })
+})
+describe('About anchor', function() {
+	it('should go to About url on click', function() {
+		browser.click('#main > nav-bar > div > div > div.logo > a > i');
+		var about_url = browser.getUrl();
+		expect(about_url).to.include('/portfolio/#/about', 'Link to About broken!');
+	})
 })
