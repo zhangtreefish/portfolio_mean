@@ -19,27 +19,6 @@ describe('Portfolio Page app', function() {
     });
 });
 
-describe('#pickTool', function() {
-	it('should have a height', function() {
-		var height = $('#pickTool').getCssProperty('height');
-		expect(height.parsed.value).to.be.at.least(0, "#pickTool height not >= 0!");
-	});
-	//TODO:
-	// it('should go to whatever is picked', function() {
-	// 	browser.setValue('#pickTool', 'javascript');
-	// 	browser.click('#pickTool');
-	// 	var tools = browser.getValue('#main > div > div > tool-projects-two > div');
- //        console.log(tools);
- //        //expect(url).to.include('//portfolio/#/', 'url mismatch');
-	// })
-	// it('should be able to select', function() {
-	// 	//var element = $('[option="javascript"]');
-	// 	//var ele = browser.element('[ng-binding=model]');
-	//     //console.log(element.isSelected()); // outputs: true
-	//     browser.selectByValue('#pickTool', 'javascript');
-	//     console.log(element.isSelected()); // outputs: false
-	// })
-})
 describe('About anchor', function() {
 	it('should exist', function() {
 		var isExisting = $('#about').isExisting();
