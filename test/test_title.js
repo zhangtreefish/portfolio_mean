@@ -32,10 +32,21 @@ describe('#pickTool', function() {
  //        console.log(tools);
  //        //expect(url).to.include('//portfolio/#/', 'url mismatch');
 	// })
+	// it('should be able to select', function() {
+	// 	//var element = $('[option="javascript"]');
+	// 	//var ele = browser.element('[ng-binding=model]');
+	//     //console.log(element.isSelected()); // outputs: true
+	//     browser.selectByValue('#pickTool', 'javascript');
+	//     console.log(element.isSelected()); // outputs: false
+	// })
 })
 describe('About anchor', function() {
+	it('should exist', function() {
+		var isExisting = browser.isExisting('#about');
+		expect(isExisting).to.equal(true, 'About anchor missing!');
+	});
 	it('should go to About url on click', function() {
-		browser.click('#main > nav-bar > div > div > div.logo > a > i');
+		browser.click('#about');
 		var about_url = browser.getUrl();
 		expect(about_url).to.include('/portfolio/#/about', 'Link to About broken!');
 	})
