@@ -178,7 +178,7 @@ a {
   padding: 5px;
   background-color: #fdfdfd;
   width: 320px;
-  margin-top: 15px;
+  margin: 5px;
   float: left;
   text-align: center;
   padding-top: 10px;
@@ -325,15 +325,13 @@ a {
 }
 
 @media screen  and (max-width: 350px) {
-        body{background-color: #CC4A14;}
-      }
+  body{background-color: #CC4A14;}
+}
 
-
-body {background-color: green;}
+@media screen  and (max-width: 800px) {
+  body {background-color: green;}
+}
 
 @media screen and (min-width: 800px) {
-        body {background-color: #02b3e4;}
-        .project {
-          width: 500px;
-          margin: 10px; }
-      }
+  body {background-color: #02b3e4;}
+}
