@@ -121,7 +121,7 @@
 		"year_end": 2016,
 		"description": "Developed a Flask web app, hosted it in Amazon Web Service using Apache HTTP Server and PostgreSQL on Ubuntu system",
 		"image": "http://i.imgur.com/dd4d0fr.png",
-		"url": "http://ec2-52-38-199-253.us-west-2.compute.amazonaws.com/",
+		"url": "http://ec2-34-208-105-239.us-west-2.compute.amazonaws.com/",
 		"code": "https://github.com/zhangtreefish/Project-3-for-Full-Stack-Nanodegree-at-Udacity",
 		"tools": ["amazon-web-services", "apache2", "postgresql", "ubuntu", "linux", "flask", "jinja2", "python", "json", "sqlalchemy", "oauth2", "vagrant"]
 	}, {
