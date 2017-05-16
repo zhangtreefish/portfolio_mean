@@ -2,7 +2,6 @@ let mongoose = require('mongoose');
 
 module.exports = function(goose_for_db) {
   let projectSchema = {
-    _id: mongoose.Schema.Types.ObjectId,
     id: { type: String, required: [true, 'why no id?'] },
     genre: { type: String, enum: ['full stack', 'front-end', 'back-end', 'database'], required: [true, 'why no genre?']},
     title: { type: String, required: [true, 'why no title?']},
@@ -10,9 +9,9 @@ module.exports = function(goose_for_db) {
     year_end: { type: Number },
     description: { type: String, required: [true, 'why no description?']},
     tools: [String],
-    image: { type: String, match: /^http:\/\//i },
-    url: { type: String, match: /^https:\/\//i },
-    code: { type: String, match: /^https:\/\//i }
+    image: { type: String, match: /^https?:\/\//i },
+    url: { type: String, match: /^https?:\/\//i },
+    code: { type: String, match: /^https?:\/\//i }
   };
 
   let schema = new mongoose.Schema(projectSchema);
