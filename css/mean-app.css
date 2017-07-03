@@ -150,6 +150,7 @@ a {
   border-radius: 5px;
   padding: 5px;
   position: relative;
+  margin: 10px 0;
 }
 
 /* Product directive */
@@ -157,7 +158,7 @@ a {
 .project-wrapper {
   margin: auto;
   width: 95%;
-  padding: 20px 0;
+  padding: 5px 0;
 }
 
 .project-wrapper .sort-arrow {
@@ -172,13 +173,15 @@ a {
   margin-left: 0.5em;
 }
 
+.project-banner {
+  font: 0.8em;
+}
+
 .project {
   border: 5px solid #02b3e4;
   border-radius: 5px;
   padding: 5px;
   background-color: #fdfdfd;
-  width: 100%;
-  margin: auto;
   float: left;
   text-align: center;
 }
@@ -202,7 +205,6 @@ a {
 
 .project .project-description {
   color: #666666;
-  /*font-size: 0.9em;*/
   overflow: auto;
 }
 
@@ -217,14 +219,15 @@ a {
 /* project details */
 .project-details {
   font-size: 0.8em;
+  margin: 10px 0;
 }
 
 .project-details .project-details-content {
-  margin-top: 15px;
+  padding-top: 15px;
   border: 1px solid #BDBDBD;
   border-radius: 5px;
-  padding: 5px;
-  min-width: 290px;
+  position: relative;
+  margin: 10px 0;
 }
 
 .project-details .image-left {
@@ -236,6 +239,7 @@ a {
 .project-details .image-left img {
   height: 300px;
   width: 300px;
+  max-width: 100%;
   margin-top: 15px;
 }
 
@@ -271,7 +275,6 @@ a {
 .me-wrapper ul {
   height: 15px;
 }
-
 
 .me-wrapper .update-portfolio-button {
   width: 40px;
