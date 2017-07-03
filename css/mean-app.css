@@ -155,7 +155,9 @@ a {
 /* Product directive */
 
 .project-wrapper {
-  margin-top: 15px;
+  margin: auto;
+  width: 95%;
+  padding: 20px 0;
 }
 
 .project-wrapper .sort-arrow {
@@ -175,9 +177,8 @@ a {
   border-radius: 5px;
   padding: 5px;
   background-color: #fdfdfd;
-  width: 320px;
-  max-width: 100%;
-  margin: 5px;
+  width: 100%;
+  margin: auto;
   float: left;
   text-align: center;
   padding-top: 10px;
@@ -293,14 +294,16 @@ a {
   padding: 10px;
   text-align: center;
   min-width: 275px;
+  width: 95%;
+  margin: auto;
 }
 
 .pickTool {
   border-radius: 5px;
   padding: 5px;
   background-color: #02b3e4;
-  width: 320px;
-  max-width: 100%;
+  width: 100%;
+  margin: auto;
   float: left;
   text-align: center;
   padding-top: 5px;
