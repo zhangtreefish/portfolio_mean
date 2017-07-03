@@ -19,7 +19,9 @@ Facebook, then go to "http://localhost:3003/api/v1/me" to verify successful
 authentication;
 
 4. To view the front-end, after starting the server, go to
-http://localhost:3003/portfolio/#/ and other views defined in portfolio/index.js; set Network/Disable Cache at Chrome DevTools, make changes to code and observe the changes;
+http://localhost:3003/portfolio/#/ and other views defined in portfolio/index.js; Go to
+portfolio directory and run 'gulp'; set Network/Disable Cache at Chrome DevTools, make
+changes to code and observe the changes;
 
 5. To deploy a new version of the app:
 ```sh
