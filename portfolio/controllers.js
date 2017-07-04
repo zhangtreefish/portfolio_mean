@@ -92,10 +92,14 @@ exports.ToolProjectsTwoController = function($scope, $routeParams, $http, $share
     $http.
       get('/api/v1/projects/tool/' + $scope.selectedTool._id).
       success(function(data) {
+        // $location.path('/tools');
         $scope.projects = data.projects;
+        // $route.reload();
         $log.log('$scope.projects', $scope.projects);
       });
   };
+
+  $scope.load();
 
   setTimeout(function() {
     $scope.$emit('ToolProjectsTwoController');

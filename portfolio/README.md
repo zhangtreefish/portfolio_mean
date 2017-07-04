@@ -25,4 +25,5 @@ Make changes to .js code and watch the pages change.
 ./node_modules/karma/bin/karma start ./karma.local.conf.js
 ```
 ##References:
-https://github.com/stefanKuijers/live-templates/blob/master/live-templates.js
+[live templates](https://github.com/stefanKuijers/live-templates/blob/master/live-templates.js)
+[failure in page refresh after load](https://stackoverflow.com/questions/21699271/angular-page-doesnt-refresh-after-data-is-added-or-removed)
