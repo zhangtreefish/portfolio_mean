@@ -1793,7 +1793,7 @@ var s = {};
 };
 
 exports.$shareTool = function() {
-  return {selectedTool: {_id: ''}};
+  return {selectedTool: {_id: 'react'}};
 };
 exports.$shareUserTool = function() {
   return {selectedTool: {_id: ''}};
