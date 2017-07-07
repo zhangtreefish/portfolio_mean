@@ -3,7 +3,6 @@ let wagner = require('wagner-core');
 var path = require('path');
 
 require('./models')(wagner);
-require('./dependencies')(wagner);
 
 let app = express();
 app.use(require('morgan')('combined'));
@@ -18,5 +17,7 @@ app.use(express.static(path.join(__dirname,'../')));
 // for production invoke client-side cache:
 // app.use(express.static('../', { maxage: 24X60X60 /* 1 day */ }));
 
-app.listen(3000);
-console.log('Listening on port 3000!');
+var server = app.listen(process.env.PORT || 8080, function () {
+  var port = server.address().port;
+  console.log("App now running at the port", port);
+});

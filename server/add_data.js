@@ -20,4 +20,3 @@ wagner.invoke(function(Project){
     }
   });
 });
-

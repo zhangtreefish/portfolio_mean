@@ -74,7 +74,7 @@ var s = {};
 };
 
 exports.$shareTool = function() {
-  return {selectedTool: {_id: 'javascript'}};
+  return {selectedTool: {_id: 'react'}};
 };
 exports.$shareUserTool = function() {
   return {selectedTool: {_id: ''}};

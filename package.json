@@ -7,13 +7,18 @@
     "type": "git",
     "url": "https://github.com/zhangtreefish/portfolio_mean.git"
   },
-  "keywords": ["MEAN stack"],
+  "keywords": [
+    "MEAN stack"
+  ],
   "author": "zhangtreefish",
   "license": "UNLICENSED",
   "bugs": {
     "url": "https://github.com/zhangtreefish/portfolio_mean/issues"
   },
   "homepage": "",
+  "engines": {
+    "node": "7.9.0"
+  },
   "dependencies": {
     "body-parser": "1.12.4",
     "express": "4.12.3",
@@ -29,14 +34,20 @@
     "wagner-core": "0.1.0"
   },
   "devDependencies": {
-    "mocha": "2.2.4",
+    "chai": "^3.5.0",
     "gulp": "3.8.11",
-    "gulp-mocha": "2.0.1"
+    "gulp-mocha": "2.0.1",
+    "mocha": "2.2.4",
+    "selenium-standalone": "^6.4.1",
+    "wdio-mocha-framework": "^0.5.10",
+    "wdio-selenium-standalone-service": "0.0.8",
+    "webdriverio": "^4.7.1"
   },
   "scripts": {
     "testdb": "mocha server/test_db.js",
     "testapi": "mocha server/test_api.js",
     "testauth": "mocha server/test_auth.js",
+    "test": "wdio wdio.mocha.conf.js",
     "watch": "gulp watch",
     "start": "node server/index.js"
   }
