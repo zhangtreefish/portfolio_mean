@@ -1790,7 +1790,7 @@ var s = {};
 };
 
 exports.$shareTool = function() {
-  return {selectedTool: {_id: 'javascript'}};
+  return {selectedTool: {_id: ''}};
 };
 exports.$shareUserTool = function() {
   return {selectedTool: {_id: ''}};
