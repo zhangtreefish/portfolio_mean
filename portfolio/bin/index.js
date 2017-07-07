@@ -85,7 +85,7 @@ exports.ProjectsByToolController = function($scope, $routeParams, $http, $log) {
   }, 0);
 };
 
-exports.ToolProjectsTwoController = function($scope, $routeParams, $http, $shareTool, $log) {
+exports.ToolProjectsTwoController = function($scope, $routeParams, $http, $shareTool, $log, $location, $route) {
   $scope.selectedTool = $shareTool.selectedTool;
   var encode = $shareTool.selectedTool._id;
   $log.log('trying hard getting $scope.projects with $scope.selectedTool', $scope.selectedTool);
@@ -93,10 +93,13 @@ exports.ToolProjectsTwoController = function($scope, $routeParams, $http, $share
     $http.
       get('/api/v1/projects/tool/' + $scope.selectedTool._id).
       success(function(data) {
-        // $location.path('/tools');
+        $location.path('/tools');
         $scope.projects = data.projects;
-        // $route.reload();
+        //$route.reload();
         $log.log('$scope.projects', $scope.projects);
+      }).
+      error(function (err) {
+        console.error(err);
       });
   };
 
